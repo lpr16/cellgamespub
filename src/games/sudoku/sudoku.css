@@ -1,0 +1,255 @@
+.sudoku {
+  --accent: var(--sudoku);
+}
+
+.sudoku .status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.sudoku .status .link-btn {
+  margin-left: auto;
+}
+
+/* The board takes whatever room is left, stays square, and sits just above the
+   controls so both are within reach of a thumb on a tall phone. */
+.board-wrap {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: end center;
+  container-type: size;
+  padding: 4px 0 12px;
+}
+
+.board {
+  width: min(100cqw, 100cqh);
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  grid-template-rows: repeat(9, minmax(0, 1fr));
+  border: 2px solid var(--line-strong);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+  container-type: inline-size;
+}
+
+.board.is-hidden .cell {
+  color: transparent;
+}
+
+.cell {
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 6.2cqw;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.cell:nth-child(9n) {
+  border-right: 0;
+}
+
+.cell:nth-child(n + 73) {
+  border-bottom: 0;
+}
+
+.cell.edge-r {
+  border-right: 2px solid var(--line-strong);
+}
+
+.cell.edge-b {
+  border-bottom: 2px solid var(--line-strong);
+}
+
+.cell.given {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.cell.peer {
+  background: color-mix(in srgb, var(--accent) 9%, var(--surface));
+}
+
+.cell.same {
+  background: color-mix(in srgb, var(--accent) 26%, var(--surface));
+}
+
+.cell.selected {
+  background: color-mix(in srgb, var(--accent) 38%, var(--surface));
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.cell.wrong {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 16%, var(--surface));
+}
+
+.cell.wrong.selected {
+  box-shadow: inset 0 0 0 2px var(--danger);
+}
+
+.cell:focus-visible {
+  outline-offset: -3px;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 4%;
+  font-size: 2.7cqw;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.notes span {
+  display: grid;
+  place-items: center;
+}
+
+/* ---------- Controls ---------- */
+
+.controls {
+  display: grid;
+  gap: 10px;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tools button {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-height: 56px;
+  padding: 6px 2px;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.tools button:active:not(:disabled) {
+  background: var(--surface-2);
+}
+
+.tools button:disabled {
+  opacity: 0.38;
+}
+
+.tools button.on {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.pad {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.pad button {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 64px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.pad button small {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.pad button:active:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface));
+}
+
+.pad button:disabled {
+  color: var(--muted);
+}
+
+.pad button.spent {
+  opacity: 0.3;
+}
+
+/* ---------- New game sheet ---------- */
+
+.level-list {
+  display: grid;
+  gap: 8px;
+}
+
+.level-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+  padding: 0 16px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  text-align: left;
+}
+
+.level-btn small {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.level-btn:active {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface-2));
+}
+
+/* Tall screens have room to spare: give the keys more of it. */
+@media (min-height: 800px) {
+  .controls {
+    gap: 12px;
+  }
+
+  .tools button {
+    min-height: 62px;
+  }
+
+  .pad button {
+    min-height: 76px;
+    font-size: 1.75rem;
+  }
+}
+
+/* Short screens: shrink the controls before the board gets cramped. */
+@media (max-height: 640px) {
+  .tools button {
+    min-height: 48px;
+  }
+
+  .pad button {
+    min-height: 50px;
+    font-size: 1.375rem;
+  }
+}
