@@ -183,6 +183,10 @@ svg {
   padding: 0 4px;
 }
 
+.link-btn:disabled {
+  opacity: 0.4;
+}
+
 /* ---------- Home ---------- */
 
 .home {

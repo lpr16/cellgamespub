@@ -1,0 +1,311 @@
+.crossword {
+  --accent: var(--crossword);
+  --block: #2b303b;
+  --cell: var(--surface);
+}
+
+:root[data-theme='dark'] .crossword {
+  --block: #0c0e11;
+  --cell: #2a2f38;
+}
+
+.crossword .status {
+  gap: 12px;
+}
+
+/* ---------- Puzzle list ---------- */
+
+.cw-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  margin: 0 calc(var(--pad) * -1);
+  padding: 0 var(--pad) 8px;
+}
+
+.cw-list section {
+  margin-top: 20px;
+}
+
+.cw-list h2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 1.1875rem;
+  font-weight: 700;
+}
+
+.cw-list h2 small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.cw-tiles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cw-tile {
+  min-height: 52px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.cw-tile:active {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface));
+}
+
+.cw-tile.started {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.cw-tile.solved {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+/* ---------- Grid ---------- */
+
+/* The grid takes whatever room is left, stays square, and sits just above the clue. */
+.cw-wrap {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: end center;
+  container-type: size;
+  padding: 4px 0 10px;
+}
+
+.cw-grid {
+  width: min(100cqw, 100cqh);
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--n), minmax(0, 1fr));
+  gap: 2px;
+  padding: 2px;
+  border-radius: 8px;
+  background: var(--block);
+  container-type: inline-size;
+}
+
+.cw-cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  background: var(--cell);
+  font-size: calc(58cqw / var(--n));
+  font-weight: 600;
+  line-height: 1;
+  padding-top: calc(10cqw / var(--n));
+  color: var(--ink);
+}
+
+.cw-num {
+  position: absolute;
+  top: 6%;
+  left: 8%;
+  font-size: max(9px, calc(22cqw / var(--n)));
+  font-weight: 600;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.cw-cell.in-word {
+  background: color-mix(in srgb, var(--accent) 24%, var(--cell));
+}
+
+.cw-cell.selected {
+  background: color-mix(in srgb, var(--accent) 58%, var(--cell));
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.cw-cell.wrong {
+  color: var(--danger);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.cw-cell.revealed {
+  color: var(--accent);
+}
+
+.cw-cell:focus-visible {
+  outline-offset: -3px;
+}
+
+.cw-grid.is-done .cw-cell {
+  background: color-mix(in srgb, var(--accent) 16%, var(--cell));
+}
+
+.cw-banner {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--danger) 14%, transparent);
+  color: var(--danger);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ---------- Current clue ---------- */
+
+.cw-clue {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 16%, var(--surface));
+}
+
+.cw-clue-text {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 2px;
+  text-align: left;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.cw-clue-text small {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Keyboard ---------- */
+
+.kb {
+  display: grid;
+  gap: 6px;
+}
+
+.kb-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.kb button {
+  flex: 0 1 calc((100% - 45px) / 10);
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 1.1875rem;
+  font-weight: 600;
+}
+
+.kb button.kb-wide {
+  flex-basis: calc((100% - 45px) / 10 * 1.6);
+}
+
+.kb button:active:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 30%, var(--surface));
+}
+
+.kb button:disabled {
+  opacity: 0.4;
+}
+
+.kb svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (min-height: 800px) {
+  .kb button {
+    min-height: 54px;
+  }
+}
+
+@media (max-height: 640px) {
+  .kb button {
+    min-height: 42px;
+  }
+
+  .cw-clue {
+    min-height: 54px;
+    margin-bottom: 6px;
+  }
+}
+
+/* ---------- Clue list sheet ---------- */
+
+.cw-clues h3 {
+  margin: 12px 0 4px;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cw-clues button {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.cw-clues button b {
+  flex: none;
+  width: 1.5em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.cw-clues button small {
+  color: var(--muted);
+}
+
+.cw-clues button.filled {
+  color: var(--muted);
+}
+
+.cw-clues button.current {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--ink);
+}
+
+.cw-clues button:active {
+  background: var(--surface-2);
+}
+
+/* "All puzzles" stays on the left; the note between pushes Clues and Help right. */
+.crossword .status .link-btn {
+  margin-left: 0;
+}
+
+.cw-cell.selected .cw-num {
+  color: var(--ink);
+}

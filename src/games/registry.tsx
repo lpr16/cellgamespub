@@ -1,4 +1,5 @@
 import { lazy, type ComponentType, type LazyExoticComponent, type ReactNode } from 'react';
+import { savedSummary as crosswordSummary } from './crossword/save';
 import { savedSummary as solitaireSummary } from './solitaire/save';
 import { savedSummary as sudokuSummary } from './sudoku/save';
 
@@ -97,8 +98,10 @@ export const GAMES: GameEntry[] = [
   {
     id: 'crossword',
     name: 'Crosswords',
-    blurb: 'Mini puzzles',
+    blurb: '60 puzzles in three sizes',
     accent: 'var(--crossword)',
     art: crosswordArt,
+    component: lazy(() => import('./crossword/Crossword')),
+    resume: crosswordSummary,
   },
 ];
