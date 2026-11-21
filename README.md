@@ -7,7 +7,7 @@ A suite of classic games for phones, built as one installable, offline web app.
 | Sudoku | Playable |
 | Solitaire (Klondike, draw one or three) | Playable |
 | Mahjong (tile matching) | Planned |
-| Crosswords (60 puzzles in three sizes) | Playable |
+| Crosswords (60 puzzles each in English, Portuguese and Spanish) | Playable |
 
 ## Run it
 
@@ -36,9 +36,14 @@ The public copy of this project is `lpr16/cellgamespub`. Every push to its defau
 
 ## Crossword puzzles
 
-The puzzles are generated, not hand-drawn. `scripts/crossword-words.txt` holds the answers and
-their clues; `npm run crosswords` fills grids from that list and writes
-`src/games/crossword/puzzles.json`, which is checked in. To add or change clues, edit the word
+The puzzles are generated, not hand-drawn. Each language has a word list,
+`scripts/crossword-words.<language>.txt`, holding answers and their clues. `npm run crosswords`
+fills grids from those lists and writes `src/games/crossword/puzzles.<language>.json`, which are
+checked in (`npm run crosswords pt` rebuilds one language). To add or change clues, edit a word
 list and run the script again. The tests check every shipped puzzle.
+
+Answers are written with their accents in the word lists; the grid drops them, as printed
+crosswords do (É is entered as E, Ç as C). Spanish keeps Ñ as its own letter. The crossword
+screen's own text follows the language of the puzzles (`src/games/crossword/strings.ts`).
 
 Saved games, statistics and settings are kept in the browser's local storage on the device.

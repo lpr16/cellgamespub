@@ -1,4 +1,4 @@
-// Builds src/games/crossword/puzzles.json from scripts/crossword-words.txt.
+// Builds src/games/crossword/puzzles.<language>.json from scripts/crossword-words.<language>.txt.
 //
 // Grids are lattice style: words run along every other row and column, so each
 // word crosses others at alternate letters. That keeps good fills possible with
@@ -9,8 +9,16 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
-const WORDS_FILE = fileURLToPath(new URL('./crossword-words.txt', import.meta.url));
-const OUT_FILE = fileURLToPath(new URL('../src/games/crossword/puzzles.json', import.meta.url));
+// Each language has its own word list and gets its own set of puzzles. Puzzle ids carry
+// the language (English ones have no prefix, so progress saved before languages existed still fits).
+const LANGUAGES = [
+  { code: 'en', idPrefix: '', seed: 20261121 },
+  { code: 'pt', idPrefix: 'pt-', seed: 20261122 },
+  { code: 'es', idPrefix: 'es-', seed: 20261123 },
+];
+
+const wordsFile = (code) => fileURLToPath(new URL(`./crossword-words.${code}.txt`, import.meta.url));
+const outFile = (code) => fileURLToPath(new URL(`../src/games/crossword/puzzles.${code}.json`, import.meta.url));
 
 const LEVELS = [
   { key: 's', size: 5, count: 20, extraBlocks: [0, 1], minEntries: 4, sameShape: 7 },
@@ -35,19 +43,35 @@ function mulberry32(seed) {
 
 // ---------- Word list ----------
 
-function readWords() {
+/**
+ * Grid letters carry no accents, as in printed crosswords: É becomes E and Ç becomes C.
+ * Spanish keeps Ñ, which is a letter of its own.
+ */
+function normalize(text) {
+  return text
+    .toUpperCase()
+    .replace(/Ñ/g, '\u0001')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\u0001/g, 'Ñ');
+}
+
+function readWords(code) {
+  const letters = code === 'es' ? /^[A-ZÑ]+$/ : /^[A-Z]+$/;
   const clues = new Map();
-  for (const raw of readFileSync(WORDS_FILE, 'utf8').split('\n')) {
+  for (const raw of readFileSync(wordsFile(code), 'utf8').split('\n')) {
     const line = raw.trim();
     if (!line || line.startsWith('#')) continue;
     const bar = line.indexOf('|');
-    const word = line.slice(0, bar);
+    const word = normalize(line.slice(0, bar));
     const clue = line.slice(bar + 1).trim();
-    if (bar < 0 || !/^[A-Z]+$/.test(word) || word.length < MIN_LEN || word.length > MAX_LEN || !clue) {
-      throw new Error(`Bad line in word list: ${line}`);
+    if (bar < 0 || !letters.test(word) || word.length < MIN_LEN || word.length > MAX_LEN || !clue) {
+      throw new Error(`Bad line in ${code} word list: ${line}`);
     }
-    if (clues.has(word)) throw new Error(`Duplicate word: ${word}`);
-    if (clue.toUpperCase().includes(word)) throw new Error(`Clue gives away its answer: ${line}`);
+    if (clues.has(word)) throw new Error(`Duplicate ${code} word: ${word}`);
+    if (normalize(clue).split(/[^A-ZÑ0-9]+/).includes(word)) {
+      throw new Error(`Clue gives away its answer: ${line}`);
+    }
     clues.set(word, clue);
   }
   return clues;
@@ -219,19 +243,21 @@ function assemble(id, size, white, entries, filled, clues) {
   return { id, size, rows, entries: numbered };
 }
 
-function main() {
-  const clues = readWords();
+function build(language) {
+  const clues = readWords(language.code);
   const byLength = {};
   for (const w of clues.keys()) (byLength[w.length] ??= []).push(w);
   const usage = new Map();
-  const rng = mulberry32(20261121);
+  const rng = mulberry32(language.seed);
   const puzzles = [];
 
   for (const level of LEVELS) {
     const shapeUses = new Map();
     let made = 0;
     for (let attempt = 0; made < level.count; attempt++) {
-      if (attempt > 200000) throw new Error(`Could not build enough ${level.size}x${level.size} puzzles`);
+      if (attempt > 200000) {
+        throw new Error(`Could not build enough ${level.size}x${level.size} puzzles in ${language.code}`);
+      }
       const [lo, hi] = level.extraBlocks;
       const white = randomShape(level.size, lo + Math.floor(rng() * (hi - lo + 1)), rng);
       const entries = isUsableShape(white, level.size, level.minEntries);
@@ -243,15 +269,15 @@ function main() {
       shapeUses.set(shapeKey, (shapeUses.get(shapeKey) ?? 0) + 1);
       for (const w of filled.chosen) usage.set(w, (usage.get(w) ?? 0) + 1);
       made++;
-      const id = `${level.key}${String(made).padStart(2, '0')}`;
+      const id = `${language.idPrefix}${level.key}${String(made).padStart(2, '0')}`;
       puzzles.push(assemble(id, level.size, white, entries, filled, clues));
     }
   }
 
-  writeFileSync(OUT_FILE, JSON.stringify(puzzles) + '\n');
+  writeFileSync(outFile(language.code), JSON.stringify(puzzles) + '\n');
   const counts = [...usage.values()];
   console.log(
-    `Wrote ${puzzles.length} puzzles using ${usage.size} of ${clues.size} words; ` +
+    `${language.code}: wrote ${puzzles.length} puzzles using ${usage.size} of ${clues.size} words; ` +
       `most repeated word appears ${Math.max(...counts)} times.`,
   );
   for (const level of LEVELS) {
@@ -261,4 +287,8 @@ function main() {
   }
 }
 
-main();
+// Build the languages named on the command line, or all of them.
+const wanted = process.argv.slice(2);
+for (const language of LANGUAGES) {
+  if (wanted.length === 0 || wanted.includes(language.code)) build(language);
+}

@@ -23,6 +23,14 @@
   padding: 0 var(--pad) 8px;
 }
 
+.cw-langs {
+  margin-top: 8px;
+}
+
+.cw-langs button {
+  flex: 1;
+}
+
 .cw-list section {
   margin-top: 20px;
 }

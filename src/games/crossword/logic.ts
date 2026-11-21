@@ -146,7 +146,7 @@ export function reducer(p: Puzzle, s: CrosswordState, a: CrosswordAction): Cross
       return p.entries[a.entry] ? enter(s, p.entries[a.entry]) : s;
 
     case 'letter': {
-      if (s.done || !/^[A-Z]$/.test(a.letter)) return s;
+      if (s.done || !/^[A-ZÑ]$/.test(a.letter)) return s;
       const entry = currentEntry(p, s);
       let next = s;
       if (s.marks[s.cell] !== MARK_REVEALED) {
@@ -207,13 +207,4 @@ export function reducer(p: Puzzle, s: CrosswordState, a: CrosswordAction): Cross
     case 'clear':
       return { ...newState(p), cell: s.cell, dir: s.dir };
   }
-}
-
-// ---------- Naming ----------
-
-const LEVELS: Record<string, string> = { s: 'Small', m: 'Medium', l: 'Large' };
-
-/** "Medium 3" for the puzzle with id "m03". */
-export function puzzleName(id: string): string {
-  return `${LEVELS[id[0]] ?? 'Puzzle'} ${Number(id.slice(1))}`;
 }

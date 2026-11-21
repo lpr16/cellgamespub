@@ -2,9 +2,11 @@
 // summary without loading the puzzles.
 import { formatTime } from '../../shell/format';
 import { load } from '../../shell/storage';
+import { puzzleName } from './names';
 
 export const PROGRESS_KEY = 'crossword.progress';
 export const CURRENT_KEY = 'crossword.current';
+export const LANG_KEY = 'crossword.lang';
 
 /** What is remembered about one puzzle. */
 export interface SavedPuzzle {
@@ -19,13 +21,11 @@ export interface SavedPuzzle {
 
 export type Progress = Record<string, SavedPuzzle>;
 
-const LEVELS: Record<string, string> = { s: 'Small', m: 'Medium', l: 'Large' };
-
 /** One line describing the puzzle in progress, or null when there isn't one. */
 export function savedSummary(): string | null {
   const id = load<string | null>(CURRENT_KEY, null);
   if (!id) return null;
   const saved = load<Progress>(PROGRESS_KEY, {})[id];
   if (!saved || saved.done) return null;
-  return `${LEVELS[id[0]] ?? 'Puzzle'} ${Number(id.slice(1))} · ${formatTime(saved.elapsed ?? 0)}`;
+  return `${puzzleName(id)} · ${formatTime(saved.elapsed ?? 0)}`;
 }

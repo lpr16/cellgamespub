@@ -98,7 +98,7 @@ export const GAMES: GameEntry[] = [
   {
     id: 'crossword',
     name: 'Crosswords',
-    blurb: '60 puzzles in three sizes',
+    blurb: 'English, Português, Español',
     accent: 'var(--crossword)',
     art: crosswordArt,
     component: lazy(() => import('./crossword/Crossword')),

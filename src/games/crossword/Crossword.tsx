@@ -13,27 +13,33 @@ import {
   isEntryFull,
   isFull,
   newState,
-  puzzleName,
   reducer,
   type CrosswordAction,
   type CrosswordState,
   type Puzzle,
   type PuzzleData,
 } from './logic';
-import puzzlesJson from './puzzles.json';
-import { CURRENT_KEY, PROGRESS_KEY, type Progress, type SavedPuzzle } from './save';
+import { LANGS, LEVEL_KEYS, levelName, parseId, puzzleName, type Lang } from './names';
+import puzzlesEn from './puzzles.en.json';
+import puzzlesEs from './puzzles.es.json';
+import puzzlesPt from './puzzles.pt.json';
+import { CURRENT_KEY, LANG_KEY, PROGRESS_KEY, type Progress, type SavedPuzzle } from './save';
+import { STRINGS, defaultLang, toGridLetter } from './strings';
 import './crossword.css';
 
-const PUZZLES = (puzzlesJson as PuzzleData[]).map(buildPuzzle);
-const BY_ID = new Map(PUZZLES.map((p) => [p.id, p]));
+const SETS: Record<Lang, Puzzle[]> = {
+  en: (puzzlesEn as PuzzleData[]).map(buildPuzzle),
+  pt: (puzzlesPt as PuzzleData[]).map(buildPuzzle),
+  es: (puzzlesEs as PuzzleData[]).map(buildPuzzle),
+};
+const BY_ID = new Map(LANGS.flatMap((lang) => SETS[lang]).map((p) => [p.id, p]));
 
-const LEVELS = [
-  { key: 's', label: 'Small', grid: '5 × 5' },
-  { key: 'm', label: 'Medium', grid: '7 × 7' },
-  { key: 'l', label: 'Large', grid: '9 × 9' },
-];
+const GRID_SIZES = { s: '5 × 5', m: '7 × 7', l: '9 × 9' };
 
-const KEY_ROWS = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'];
+function savedLang(): Lang {
+  const lang = load<Lang | null>(LANG_KEY, null);
+  return lang && LANGS.includes(lang) ? lang : defaultLang();
+}
 
 function toSaved(s: CrosswordState): SavedPuzzle {
   return {
@@ -84,6 +90,7 @@ interface CellProps {
   selected: boolean;
   inWord: boolean;
   mark: number;
+  emptyLabel: string;
   onSelect: (index: number) => void;
 }
 
@@ -94,7 +101,7 @@ const Cell = memo(function Cell(p: CellProps) {
   if (p.mark === MARK_WRONG) cls.push('wrong');
   if (p.mark === MARK_REVEALED) cls.push('revealed');
   return (
-    <button className={cls.join(' ')} onClick={() => p.onSelect(p.index)} aria-label={p.letter || 'Empty square'}>
+    <button className={cls.join(' ')} onClick={() => p.onSelect(p.index)} aria-label={p.letter || p.emptyLabel}>
       {p.number > 0 && <span className="cw-num">{p.number}</span>}
       {p.letter}
     </button>
@@ -106,8 +113,17 @@ export default function Crossword({ onExit }: GameProps) {
   const [state, dispatch] = useReducer(rootReducer, null, initialState);
   const [progress, setProgress] = useState<Progress>(() => load(PROGRESS_KEY, {}));
   const [sheet, setSheet] = useState<'none' | 'clues' | 'help' | 'won'>('none');
+  const [listLang, setListLang] = useState<Lang>(savedLang);
 
   const puzzle = state ? BY_ID.get(state.puzzleId)! : null;
+  // An open puzzle sets the language of the screen; the list uses the chosen one.
+  const lang = state ? parseId(state.puzzleId).lang : listLang;
+  const t = STRINGS[lang];
+
+  const chooseLang = (next: Lang) => {
+    save(LANG_KEY, next);
+    setListLang(next);
+  };
 
   const latest = useRef(state);
   latest.current = state;
@@ -186,11 +202,13 @@ export default function Crossword({ onExit }: GameProps) {
 
   const select = useCallback((cell: number) => dispatch({ type: 'select', cell }), []);
   const typeLetter = useCallback(
-    (letter: string) => {
+    (key: string) => {
+      const letter = toGridLetter(key, lang);
+      if (!letter) return;
       buzz(6);
       dispatch({ type: 'letter', letter });
     },
-    [buzz],
+    [buzz, lang],
   );
 
   const playing = Boolean(state) && sheet === 'none';
@@ -198,7 +216,7 @@ export default function Crossword({ onExit }: GameProps) {
     if (!playing) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (/^[a-zA-Z]$/.test(e.key)) typeLetter(e.key.toUpperCase());
+      if (toGridLetter(e.key, lang)) typeLetter(e.key);
       else if (e.key === 'Backspace') dispatch({ type: 'backspace' });
       else if (e.key === 'Tab') dispatch({ type: 'step', delta: e.shiftKey ? -1 : 1 });
       else if (e.key === 'Enter' || e.key === ' ') dispatch({ type: 'toggleDir' });
@@ -207,47 +225,63 @@ export default function Crossword({ onExit }: GameProps) {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [playing, typeLetter]);
+  }, [playing, typeLetter, lang]);
 
   const nextPuzzle = useMemo(() => {
     if (!state) return null;
-    const open = (p: Puzzle) => p.id !== state.puzzleId && !progress[p.id]?.done;
-    const at = PUZZLES.findIndex((p) => p.id === state.puzzleId);
-    return [...PUZZLES.slice(at + 1), ...PUZZLES.slice(0, at)].find(open) ?? null;
+    // The next unsolved puzzle in the same language.
+    const set = SETS[parseId(state.puzzleId).lang];
+    const unsolved = (p: Puzzle) => p.id !== state.puzzleId && !progress[p.id]?.done;
+    const at = set.findIndex((p) => p.id === state.puzzleId);
+    return [...set.slice(at + 1), ...set.slice(0, at)].find(unsolved) ?? null;
   }, [state, progress]);
 
   // ---------- Puzzle list ----------
 
   if (!state || !puzzle) {
     return (
-      <div className="screen crossword">
-        <GameHeader title="Crosswords" onExit={onExit} />
+      <div className="screen crossword" lang={lang}>
+        <GameHeader title={t.title} onExit={onExit} />
         <div className="cw-list">
-          {LEVELS.map((level) => {
-            const set = PUZZLES.filter((p) => p.id[0] === level.key);
+          <div className="segmented cw-langs" role="radiogroup" aria-label="Language">
+            {LANGS.map((code) => (
+              <button
+                key={code}
+                role="radio"
+                aria-checked={code === lang}
+                className={code === lang ? 'on' : ''}
+                lang={code}
+                onClick={() => chooseLang(code)}
+              >
+                {STRINGS[code].language}
+              </button>
+            ))}
+          </div>
+          {LEVEL_KEYS.map((level) => {
+            const set = SETS[lang].filter((p) => parseId(p.id).level === level);
             const solved = set.filter((p) => progress[p.id]?.done).length;
             return (
-              <section key={level.key}>
+              <section key={level}>
                 <h2>
-                  {level.label}
+                  {levelName(lang, level)}
                   <small>
-                    {level.grid} · {solved} of {set.length} solved
+                    {GRID_SIZES[level]} · {t.solvedOf(solved, set.length)}
                   </small>
                 </h2>
                 <div className="cw-tiles">
                   {set.map((p) => {
                     const saved = progress[p.id];
-                    const started = saved && /[A-Z]/.test(saved.letters);
+                    const started = saved && /[A-ZÑ]/.test(saved.letters);
                     const status = saved?.done ? 'solved' : started ? 'started' : 'new';
-                    const number = Number(p.id.slice(1));
+                    const label = status === 'solved' ? t.statusSolved : started ? t.statusStarted : t.statusNew;
                     return (
                       <button
                         key={p.id}
                         className={`cw-tile ${status}`}
                         onClick={() => open(p.id)}
-                        aria-label={`${level.label} ${number}, ${status === 'new' ? 'not started' : status}`}
+                        aria-label={`${puzzleName(p.id)}, ${label}`}
                       >
-                        {number}
+                        {parseId(p.id).number}
                       </button>
                     );
                   })}
@@ -272,7 +306,7 @@ export default function Crossword({ onExit }: GameProps) {
   };
 
   return (
-    <div className="screen crossword">
+    <div className="screen crossword" lang={lang}>
       <GameHeader title={puzzleName(puzzle.id)} onExit={onExit}>
         <span className="timer" aria-label={`Time ${formatTime(state.elapsed)}`}>
           {formatTime(state.elapsed)}
@@ -281,14 +315,14 @@ export default function Crossword({ onExit }: GameProps) {
 
       <div className="status">
         <button className="link-btn" onClick={showList}>
-          All puzzles
+          {t.allPuzzles}
         </button>
         <span className="status-note" />
         <button className="link-btn" onClick={() => setSheet('clues')}>
-          Clues
+          {t.clues}
         </button>
         <button className="link-btn" onClick={() => setSheet('help')} disabled={state.done}>
-          Help
+          {t.help}
         </button>
       </div>
 
@@ -311,6 +345,7 @@ export default function Crossword({ onExit }: GameProps) {
                 selected={i === state.cell && !state.done}
                 inWord={!state.done && entry.cells.includes(i)}
                 mark={state.marks[i]}
+                emptyLabel={t.emptySquare}
                 onSelect={select}
               />
             ),
@@ -320,23 +355,23 @@ export default function Crossword({ onExit }: GameProps) {
 
       {full && (
         <p className="cw-banner" role="status">
-          Every square is filled, but something is wrong. Try Help.
+          {t.wrongBanner}
         </p>
       )}
 
       <div className="cw-clue">
-        <button className="icon-btn" onClick={() => dispatch({ type: 'step', delta: -1 })} aria-label="Previous clue">
+        <button className="icon-btn" onClick={() => dispatch({ type: 'step', delta: -1 })} aria-label={t.previousClue}>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M14 6l-6 6 6 6" />
           </svg>
         </button>
         <button className="cw-clue-text" onClick={() => dispatch({ type: 'toggleDir' })}>
           <small>
-            {entry.n} {entry.dir === 'across' ? 'Across' : 'Down'} · {entry.answer.length} letters
+            {entry.n} {entry.dir === 'across' ? t.across : t.down} · {t.letters(entry.answer.length)}
           </small>
           {entry.clue}
         </button>
-        <button className="icon-btn" onClick={() => dispatch({ type: 'step', delta: 1 })} aria-label="Next clue">
+        <button className="icon-btn" onClick={() => dispatch({ type: 'step', delta: 1 })} aria-label={t.nextClue}>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M10 6l6 6-6 6" />
           </svg>
@@ -344,7 +379,7 @@ export default function Crossword({ onExit }: GameProps) {
       </div>
 
       <div className="kb" aria-label="Keyboard">
-        {KEY_ROWS.map((row, r) => (
+        {t.keys.map((row, r) => (
           <div className="kb-row" key={row}>
             {[...row].map((letter) => (
               <button key={letter} onClick={() => typeLetter(letter)} disabled={state.done}>
@@ -356,7 +391,7 @@ export default function Crossword({ onExit }: GameProps) {
                 className="kb-wide"
                 onClick={() => dispatch({ type: 'backspace' })}
                 disabled={state.done}
-                aria-label="Delete"
+                aria-label={t.deleteKey}
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M9 6h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5-6zM12 10l4 4M16 10l-4 4" />
@@ -368,10 +403,10 @@ export default function Crossword({ onExit }: GameProps) {
       </div>
 
       {sheet === 'clues' && (
-        <Sheet title="Clues" onClose={() => setSheet('none')}>
+        <Sheet title={t.clues} onClose={() => setSheet('none')}>
           {[
-            { title: 'Across', list: across },
-            { title: 'Down', list: down },
+            { title: t.acrossClues, list: across },
+            { title: t.downClues, list: down },
           ].map((group) => (
             <section key={group.title} className="cw-clues">
               <h3>{group.title}</h3>
@@ -393,43 +428,43 @@ export default function Crossword({ onExit }: GameProps) {
       )}
 
       {sheet === 'help' && (
-        <Sheet title="Help" onClose={() => setSheet('none')}>
+        <Sheet title={t.help} onClose={() => setSheet('none')}>
           <div className="level-list">
             <button className="level-btn" onClick={() => help({ type: 'check' })}>
-              <span>Check puzzle</span>
-              <small>Marks wrong letters</small>
+              <span>{t.checkPuzzle}</span>
+              <small>{t.checkNote}</small>
             </button>
             <button className="level-btn" onClick={() => help({ type: 'reveal', what: 'letter' })}>
-              <span>Reveal letter</span>
-              <small>The selected square</small>
+              <span>{t.revealLetter}</span>
+              <small>{t.revealLetterNote}</small>
             </button>
             <button className="level-btn" onClick={() => help({ type: 'reveal', what: 'word' })}>
-              <span>Reveal word</span>
+              <span>{t.revealWord}</span>
               <small>
-                {entry.n} {entry.dir === 'across' ? 'Across' : 'Down'}
+                {entry.n} {entry.dir === 'across' ? t.across : t.down}
               </small>
             </button>
             <button className="level-btn" onClick={() => help({ type: 'clear' })}>
-              <span>Clear puzzle</span>
-              <small>Start again</small>
+              <span>{t.clearPuzzle}</span>
+              <small>{t.clearNote}</small>
             </button>
           </div>
         </Sheet>
       )}
 
       {sheet === 'won' && (
-        <Sheet title="Solved!" onClose={() => setSheet('none')}>
+        <Sheet title={t.solved} onClose={() => setSheet('none')}>
           <p className="sheet-text">
-            {puzzleName(puzzle.id)} in {formatTime(state.elapsed)}
-            {state.helped && ' · with help'}
+            {t.solvedIn(puzzleName(puzzle.id), formatTime(state.elapsed))}
+            {state.helped && ` · ${t.withHelp}`}
           </p>
           {nextPuzzle && (
             <button className="primary-btn" onClick={() => open(nextPuzzle.id)}>
-              Next: {puzzleName(nextPuzzle.id)}
+              {t.next(puzzleName(nextPuzzle.id))}
             </button>
           )}
           <button className="ghost-btn" onClick={showList}>
-            All puzzles
+            {t.allPuzzles}
           </button>
         </Sheet>
       )}
