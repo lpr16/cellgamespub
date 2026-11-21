@@ -20,6 +20,12 @@ npm run preview   # serve the built app
 npm run crosswords  # rebuild the crossword puzzles from the word list
 ```
 
+## Publishing
+
+Every push to the default branch runs `.github/workflows/deploy.yml`, which tests, builds and
+publishes the app to GitHub Pages. Pages must be switched on once in the repository settings
+(Settings → Pages → Source: GitHub Actions).
+
 ## Layout
 
 - `src/shell/` — home screen, settings, saving, shared sheets and buttons.
