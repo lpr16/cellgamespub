@@ -324,6 +324,10 @@ a.game-card .game-blurb {
   padding: 0 4px;
 }
 
+.timer:last-child {
+  padding-right: 12px;
+}
+
 /* ---------- Sheets ---------- */
 
 .sheet-backdrop {
@@ -472,4 +476,105 @@ a.game-card .game-blurb {
 .switch:checked::after {
   transform: translateX(20px);
   background: var(--bg);
+}
+
+/* ---------- Pieces shared by the games ---------- */
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.status .link-btn {
+  margin-left: auto;
+}
+
+
+.status-note {
+  margin-left: auto;
+  font-weight: 500;
+  text-align: right;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tools button {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-height: 56px;
+  padding: 6px 2px;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.tools button:active:not(:disabled) {
+  background: var(--surface-2);
+}
+
+.tools button:disabled {
+  opacity: 0.38;
+}
+
+.tools button.on {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+@media (min-height: 800px) {
+  .tools button {
+    min-height: 62px;
+  }
+}
+
+@media (max-height: 640px) {
+  .tools button {
+    min-height: 48px;
+  }
+}
+
+.level-list {
+  display: grid;
+  gap: 8px;
+}
+
+.level-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+  padding: 0 16px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  text-align: left;
+}
+
+.level-btn small {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.level-btn:active {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface-2));
+}
+
+
+.sheet-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.875rem;
 }

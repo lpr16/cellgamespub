@@ -6,19 +6,9 @@ export type Grid = number[];
 export type Difficulty = 'easy' | 'medium' | 'hard' | 'expert';
 export const DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard', 'expert'];
 
-export type Rng = () => number;
+import { mulberry32, shuffle, type Rng } from '../../shell/random';
 
-/** Small deterministic generator so a seed always reproduces the same puzzle. */
-export function mulberry32(seed: number): Rng {
-  let a = seed >>> 0;
-  return () => {
-    a = (a + 0x6d2b79f5) >>> 0;
-    let t = a;
-    t = Math.imul(t ^ (t >>> 15), t | 1);
-    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
+export { mulberry32, type Rng };
 
 const ALL = 0x1ff; // bits 0..8 stand for digits 1..9
 
@@ -59,14 +49,6 @@ const popcount = (m: number) => {
   return c;
 };
 const lowDigit = (m: number) => 32 - Math.clz32(m & -m); // lowest set bit as a digit 1..9
-
-function shuffle<T>(items: T[], rng: Rng): T[] {
-  for (let i = items.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1));
-    [items[i], items[j]] = [items[j], items[i]];
-  }
-  return items;
-}
 
 /** Cells that break the rules: a filled cell whose digit repeats in one of its houses. */
 export function findConflicts(grid: Grid): Set<number> {

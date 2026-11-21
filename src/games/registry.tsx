@@ -1,4 +1,5 @@
 import { lazy, type ComponentType, type LazyExoticComponent, type ReactNode } from 'react';
+import { savedSummary as solitaireSummary } from './solitaire/save';
 import { savedSummary as sudokuSummary } from './sudoku/save';
 
 export interface GameProps {
@@ -80,9 +81,11 @@ export const GAMES: GameEntry[] = [
   {
     id: 'solitaire',
     name: 'Solitaire',
-    blurb: 'Klondike',
+    blurb: 'Klondike, draw one or three',
     accent: 'var(--solitaire)',
     art: solitaireArt,
+    component: lazy(() => import('./solitaire/Solitaire')),
+    resume: solitaireSummary,
   },
   {
     id: 'mahjong',

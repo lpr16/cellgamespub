@@ -1,5 +1,7 @@
-import { memo, useCallback, useEffect, useMemo, useReducer, useRef, useState, type ReactNode } from 'react';
+import { memo, useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { formatTime } from '../../shell/format';
+import { GameHeader } from '../../shell/GameHeader';
+import { randomSeed } from '../../shell/random';
 import { Sheet } from '../../shell/Sheet';
 import { useHaptics, useSettings } from '../../shell/settings';
 import { load, remove, save } from '../../shell/storage';
@@ -117,8 +119,7 @@ export default function Sudoku({ onExit }: GameProps) {
   }, [running]);
 
   const start = useCallback((difficulty: Difficulty) => {
-    const seed = (Math.random() * 0xffffffff) >>> 0;
-    dispatch({ type: 'load', state: newGame(generatePuzzle(difficulty, seed)) });
+    dispatch({ type: 'load', state: newGame(generatePuzzle(difficulty, randomSeed())) });
     setStats((prev) => {
       const next = { ...prev, [difficulty]: { ...prev[difficulty], started: prev[difficulty].started + 1 } };
       save(STATS_KEY, next);
@@ -213,7 +214,7 @@ export default function Sudoku({ onExit }: GameProps) {
   if (!state) {
     return (
       <div className="screen sudoku">
-        <Header onExit={onExit} />
+        <GameHeader title="Sudoku" onExit={onExit} />
         {picker}
       </div>
     );
@@ -226,7 +227,7 @@ export default function Sudoku({ onExit }: GameProps) {
 
   return (
     <div className="screen sudoku">
-      <Header onExit={onExit}>
+      <GameHeader title="Sudoku" onExit={onExit}>
         <span className="timer" aria-label={`Time ${formatTime(state.elapsed)}`}>
           {formatTime(state.elapsed)}
         </span>
@@ -240,7 +241,7 @@ export default function Sudoku({ onExit }: GameProps) {
             <path d="M9 6v12M15 6v12" />
           </svg>
         </button>
-      </Header>
+      </GameHeader>
 
       <div className="status">
         <span>{DIFFICULTY_LABELS[state.difficulty]}</span>
@@ -349,20 +350,6 @@ export default function Sudoku({ onExit }: GameProps) {
 
       {picking && picker}
     </div>
-  );
-}
-
-function Header({ onExit, children }: { onExit: () => void; children?: ReactNode }) {
-  return (
-    <header className="game-head">
-      <button className="icon-btn" onClick={onExit} aria-label="Back to games">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M14 6l-6 6 6 6" />
-        </svg>
-      </button>
-      <h1>Sudoku</h1>
-      {children}
-    </header>
   );
 }
 
