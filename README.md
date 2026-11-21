@@ -22,9 +22,10 @@ npm run crosswords  # rebuild the crossword puzzles from the word list
 
 ## Publishing
 
-Every push to the default branch runs `.github/workflows/deploy.yml`, which tests, builds and
-publishes the app to GitHub Pages. Pages must be switched on once in the repository settings
-(Settings → Pages → Source: GitHub Actions).
+The public copy of this project is `lpr16/cellgamespub`. Every push to its default branch runs
+`.github/workflows/deploy.yml`, which tests and builds the app and pushes the result to the
+`gh-pages` branch. GitHub Pages serves that branch (Settings → Pages → Deploy from a branch →
+`gh-pages`) at https://lpr16.github.io/cellgamespub/.
 
 ## Layout
 
