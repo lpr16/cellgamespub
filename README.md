@@ -11,6 +11,8 @@ A suite of classic games for phones, built as one installable, offline web app.
 | Memory pairs | Playable |
 | Mahjong (tile matching) | Planned |
 | Crosswords (60 puzzles each in English, Portuguese and Spanish) | Playable |
+| Word search (three sizes, in the same three languages) | Playable |
+| Hangman (in the same three languages) | Playable |
 
 ## Run it
 
@@ -46,6 +48,10 @@ The puzzles are generated, not hand-drawn. Each language has a word list,
 fills grids from those lists and writes `src/games/crossword/puzzles.<language>.json`, which are
 checked in (`npm run crosswords pt` rebuilds one language). To add or change clues, edit a word
 list and run the script again. The tests check every shipped puzzle.
+
+The same word lists feed the other word games: the script also writes
+`src/games/words/words.<language>.json`, which Word search and Hangman draw their words and
+hints from. The three word games share one language choice (`src/games/words/lang.ts`).
 
 Answers are written with their accents in the word lists; the grid drops them, as printed
 crosswords do (É is entered as E, Ç as C). Spanish keeps Ñ as its own letter. The crossword

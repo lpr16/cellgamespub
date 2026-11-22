@@ -1,0 +1,223 @@
+.hangman {
+  --accent: var(--hangman);
+  --hm-green: #2f9e6b;
+  --hm-heart: #e0a100;
+}
+
+:root[data-theme='dark'] .hangman {
+  --hm-green: #52d1a2;
+  --hm-heart: #f2b84b;
+}
+
+.hangman .tools {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ---------- The flower ---------- */
+
+.hm-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+/* The drawing scales to whatever room the stage has, up to a comfortable size. */
+.hm-flower {
+  position: absolute;
+  inset: 4px 0;
+  margin: auto;
+  width: 100%;
+  height: calc(100% - 8px);
+  max-height: 320px;
+  overflow: visible;
+}
+
+.hm-stem {
+  fill: none;
+  stroke: var(--hm-green);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.hm-leaf {
+  fill: var(--hm-green);
+}
+
+/* A faint outline stays where each petal was. */
+.hm-petal-ghost {
+  fill: none;
+  stroke: color-mix(in srgb, var(--accent) 35%, transparent);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 5;
+}
+
+.hm-petal {
+  fill: var(--accent);
+  stroke: var(--bg);
+  stroke-width: 2;
+  transition: transform 500ms ease-in, opacity 500ms ease-in;
+}
+
+/* A lost petal drifts outwards and fades. */
+.hm-petal.gone {
+  opacity: 0;
+  transform: translateY(-34px);
+}
+
+.hm-heart {
+  fill: var(--hm-heart);
+  stroke: var(--bg);
+  stroke-width: 2;
+  transition: fill 400ms ease;
+}
+
+.hm-flower.is-lost .hm-heart {
+  fill: var(--muted);
+}
+
+.hm-flower.is-lost .hm-stem,
+.hm-flower.is-lost .hm-leaf {
+  opacity: 0.55;
+}
+
+.hm-flower.is-won {
+  animation: hm-sway 900ms ease-in-out 2;
+  transform-origin: 50% 100%;
+}
+
+@keyframes hm-sway {
+  25% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(4deg);
+  }
+}
+
+/* ---------- The word ---------- */
+
+.hm-word {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin: 6px 0 4px;
+}
+
+.hm-word span {
+  flex: 0 1 44px;
+  display: grid;
+  place-items: center;
+  height: 50px;
+  border-bottom: 3px solid var(--line-strong);
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hm-word span.missed {
+  color: var(--danger);
+}
+
+.hm-clue {
+  min-height: 2.9em;
+  padding: 4px 8px 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* ---------- Keyboard ---------- */
+
+.hm-kb {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.hm-kb-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hm-kb button {
+  flex: 0 1 calc((100% - 45px) / 10);
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 1.1875rem;
+  font-weight: 600;
+}
+
+.hm-kb button:active:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 30%, var(--surface));
+}
+
+.hm-kb button:disabled {
+  opacity: 0.45;
+}
+
+.hm-kb button.hit {
+  opacity: 1;
+  background: color-mix(in srgb, var(--accent) 28%, var(--surface));
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hm-kb button.miss {
+  opacity: 0.28;
+  text-decoration: line-through;
+}
+
+/* ---------- Sheets ---------- */
+
+.hm-answer {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.hm-answer small {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.hm-answer strong {
+  font-size: 1.75rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.hm-answer span {
+  color: var(--muted);
+}
+
+.hangman .level-btn.current {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+@media (min-height: 800px) {
+  .hm-kb button {
+    min-height: 54px;
+  }
+}
+
+@media (max-height: 640px) {
+  .hm-kb button {
+    min-height: 42px;
+  }
+
+  .hm-word span {
+    height: 42px;
+    font-size: 1.625rem;
+  }
+
+  .hm-clue {
+    min-height: 2.7em;
+    font-size: 0.9375rem;
+  }
+}

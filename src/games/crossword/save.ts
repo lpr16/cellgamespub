@@ -6,7 +6,6 @@ import { puzzleName } from './names';
 
 export const PROGRESS_KEY = 'crossword.progress';
 export const CURRENT_KEY = 'crossword.current';
-export const LANG_KEY = 'crossword.lang';
 
 /** What is remembered about one puzzle. */
 export interface SavedPuzzle {

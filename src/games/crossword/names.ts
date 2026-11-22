@@ -1,7 +1,8 @@
 // Puzzle ids and their display names. Kept tiny: the home screen uses it too.
 
-export type Lang = 'en' | 'pt' | 'es';
-export const LANGS: Lang[] = ['en', 'pt', 'es'];
+import { LANGS, type Lang } from '../words/lang';
+
+export { LANGS, type Lang };
 
 export const LEVEL_KEYS = ['s', 'm', 'l'] as const;
 export type LevelKey = (typeof LEVEL_KEYS)[number];

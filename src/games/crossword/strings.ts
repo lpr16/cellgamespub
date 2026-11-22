@@ -1,5 +1,7 @@
 // The crossword screen speaks the language of its puzzles.
-import type { Lang } from './names';
+import { defaultLang, toGridLetter, type Lang } from '../words/lang';
+
+export { defaultLang, toGridLetter };
 
 export interface Strings {
   /** Name of this language, in the language itself. */
@@ -138,21 +140,3 @@ export const STRINGS: Record<Lang, Strings> = {
     keys: ['QWERTYUIOP', 'ASDFGHJKLÑ', 'ZXCVBNM'],
   },
 };
-
-/**
- * Turn a typed character into a grid letter: accents are dropped (É becomes E, Ç becomes C),
- * and Ñ counts as a letter only in Spanish. Returns '' for anything that isn't a letter.
- */
-export function toGridLetter(key: string, lang: Lang): string {
-  if (key.length !== 1) return '';
-  const upper = key.toUpperCase();
-  if (upper === 'Ñ') return lang === 'es' ? 'Ñ' : 'N';
-  const plain = upper.normalize('NFD').replace(/[̀-ͯ]/g, '');
-  return /^[A-Z]$/.test(plain) ? plain : '';
-}
-
-/** The language to offer first, from the phone's own language. */
-export function defaultLang(): Lang {
-  const tag = (typeof navigator !== 'undefined' ? navigator.language : 'en').toLowerCase();
-  return tag.startsWith('pt') ? 'pt' : tag.startsWith('es') ? 'es' : 'en';
-}

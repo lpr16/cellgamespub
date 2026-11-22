@@ -17,6 +17,8 @@
   --freecell: #2b6cb0;
   --spider: #6b46c1;
   --memory: #b45309;
+  --wordsearch: #0e7c86;
+  --hangman: #b83280;
 
   --accent: var(--sudoku);
   --radius: 16px;
@@ -46,6 +48,8 @@
   --freecell: #7fb4f0;
   --spider: #b79cf5;
   --memory: #f6ad6b;
+  --wordsearch: #5cc8d4;
+  --hangman: #f08cc0;
 
   color-scheme: dark;
 }
@@ -225,8 +229,8 @@ svg {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 196px;
-  padding: 16px;
+  min-height: 164px;
+  padding: 14px;
   border-radius: var(--radius);
   background: var(--surface);
   border: 1px solid var(--line);
@@ -249,8 +253,8 @@ a.game-card:active {
 }
 
 .game-art {
-  width: 68px;
-  height: 68px;
+  width: 56px;
+  height: 56px;
   margin-bottom: auto;
 }
 
@@ -290,7 +294,7 @@ a.game-card:active {
 }
 
 .game-name {
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 1.1875rem;
   font-weight: 700;
 }

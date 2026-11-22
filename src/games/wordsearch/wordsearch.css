@@ -1,0 +1,199 @@
+.wordsearch {
+  --accent: var(--wordsearch);
+  /* Highlight colours for found words, used in turn. */
+  --ws-c0: #e0a100;
+  --ws-c1: #2f9e6b;
+  --ws-c2: #d9542f;
+  --ws-c3: #5b6ee1;
+  --ws-c4: #b83280;
+}
+
+:root[data-theme='dark'] .wordsearch {
+  --ws-c0: #f2b84b;
+  --ws-c1: #52d1a2;
+  --ws-c2: #ff8d6b;
+  --ws-c3: #8f9bff;
+  --ws-c4: #f08cc0;
+}
+
+.wordsearch .tools {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* The grid takes whatever room is left and stays square. */
+.ws-wrap {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: end center;
+  container-type: size;
+  padding: 4px 0 10px;
+}
+
+.ws-grid {
+  position: relative;
+  width: min(100cqw, 100cqh);
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--n), minmax(0, 1fr));
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  container-type: inline-size;
+  touch-action: none;
+  cursor: pointer;
+}
+
+/* Highlight bars are drawn behind the letters, in grid units. */
+.ws-marks {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ws-bar {
+  fill: none;
+  stroke-width: 0.78;
+  stroke-linecap: round;
+  stroke-opacity: 0.5;
+}
+
+.ws-bar.c0 {
+  stroke: var(--ws-c0);
+}
+
+.ws-bar.c1 {
+  stroke: var(--ws-c1);
+}
+
+.ws-bar.c2 {
+  stroke: var(--ws-c2);
+}
+
+.ws-bar.c3 {
+  stroke: var(--ws-c3);
+}
+
+.ws-bar.c4 {
+  stroke: var(--ws-c4);
+}
+
+.ws-bar.selecting,
+.ws-bar.anchor {
+  stroke: var(--accent);
+  stroke-opacity: 0.6;
+}
+
+.ws-bar.missed {
+  stroke: var(--danger);
+  stroke-opacity: 0.35;
+}
+
+.ws-letter {
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-size: calc(60cqw / var(--n));
+  font-weight: 650;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.ws-letter.hinted {
+  color: var(--accent);
+  animation: ws-pulse 600ms ease-in-out 4;
+}
+
+@keyframes ws-pulse {
+  50% {
+    transform: scale(1.6);
+  }
+}
+
+.ws-howto {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* ---------- Word list ---------- */
+
+.ws-words {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px 8px;
+  margin-bottom: 10px;
+}
+
+.ws-words li {
+  padding: 5px 4px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 0.9375rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ws-words li.found {
+  border-color: transparent;
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.ws-words li.found.c0 {
+  background: color-mix(in srgb, var(--ws-c0) 30%, transparent);
+}
+
+.ws-words li.found.c1 {
+  background: color-mix(in srgb, var(--ws-c1) 30%, transparent);
+}
+
+.ws-words li.found.c2 {
+  background: color-mix(in srgb, var(--ws-c2) 30%, transparent);
+}
+
+.ws-words li.found.c3 {
+  background: color-mix(in srgb, var(--ws-c3) 30%, transparent);
+}
+
+.ws-words li.found.c4 {
+  background: color-mix(in srgb, var(--ws-c4) 30%, transparent);
+}
+
+/* ---------- New game sheet ---------- */
+
+.ws-langs {
+  margin-bottom: 12px;
+}
+
+.ws-langs button {
+  flex: 1;
+}
+
+@media (max-height: 640px) {
+  .ws-words {
+    gap: 4px 6px;
+    margin-bottom: 6px;
+  }
+
+  .ws-words li {
+    padding: 3px 4px;
+    font-size: 0.875rem;
+  }
+
+  .ws-howto {
+    margin-bottom: 4px;
+    font-size: 0.8125rem;
+  }
+}
