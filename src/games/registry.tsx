@@ -1,6 +1,9 @@
 import { lazy, type ComponentType, type LazyExoticComponent, type ReactNode } from 'react';
 import { savedSummary as crosswordSummary } from './crossword/save';
+import { savedSummary as freecellSummary } from './freecell/save';
+import { savedSummary as memorySummary } from './memory/save';
 import { savedSummary as solitaireSummary } from './solitaire/save';
+import { savedSummary as spiderSummary } from './spider/save';
 import { savedSummary as sudokuSummary } from './sudoku/save';
 
 export interface GameProps {
@@ -69,6 +72,41 @@ const crosswordArt = (
   </svg>
 );
 
+const freecellArt = (
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <rect x="6" y="8" width="11" height="15" rx="2.5" className="art-line" />
+    <rect x="20" y="8" width="11" height="15" rx="2.5" className="art-line" />
+    <rect x="34" y="8" width="11" height="15" rx="2.5" className="art-fill" />
+    <rect x="48" y="8" width="11" height="15" rx="2.5" className="art-fill" />
+    <rect x="13" y="29" width="17" height="24" rx="3.5" className="art-fill art-dim" />
+    <rect x="13" y="35" width="17" height="24" rx="3.5" className="art-fill" />
+    <rect x="35" y="29" width="17" height="24" rx="3.5" className="art-fill art-dim" />
+    <rect x="35" y="35" width="17" height="24" rx="3.5" className="art-fill" />
+  </svg>
+);
+
+const spiderArt = (
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <rect x="16" y="6" width="32" height="22" rx="5" className="art-fill art-dim" />
+    <rect x="16" y="15" width="32" height="22" rx="5" className="art-fill art-dim" />
+    <rect x="16" y="24" width="32" height="22" rx="5" className="art-fill" />
+    <rect x="16" y="33" width="32" height="26" rx="5" className="art-fill" />
+    <text x="24" y="45.5" className="art-text art-small">K</text>
+    <text x="40" y="55" className="art-text art-small">A</text>
+  </svg>
+);
+
+const memoryArt = (
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <rect x="7" y="7" width="22" height="22" rx="5" className="art-fill" />
+    <rect x="35" y="7" width="22" height="22" rx="5" className="art-ink art-dim" />
+    <rect x="7" y="35" width="22" height="22" rx="5" className="art-ink art-dim" />
+    <rect x="35" y="35" width="22" height="22" rx="5" className="art-fill" />
+    <circle cx="18" cy="18" r="5" className="art-ink" />
+    <circle cx="46" cy="46" r="5" className="art-ink" />
+  </svg>
+);
+
 export const GAMES: GameEntry[] = [
   {
     id: 'sudoku',
@@ -89,11 +127,31 @@ export const GAMES: GameEntry[] = [
     resume: solitaireSummary,
   },
   {
-    id: 'mahjong',
-    name: 'Mahjong',
-    blurb: 'Tile matching',
-    accent: 'var(--mahjong)',
-    art: mahjongArt,
+    id: 'freecell',
+    name: 'FreeCell',
+    blurb: 'Every card in view',
+    accent: 'var(--freecell)',
+    art: freecellArt,
+    component: lazy(() => import('./freecell/FreeCell')),
+    resume: freecellSummary,
+  },
+  {
+    id: 'spider',
+    name: 'Spider',
+    blurb: 'One, two or four suits',
+    accent: 'var(--spider)',
+    art: spiderArt,
+    component: lazy(() => import('./spider/Spider')),
+    resume: spiderSummary,
+  },
+  {
+    id: 'memory',
+    name: 'Memory',
+    blurb: 'Find the matching pairs',
+    accent: 'var(--memory)',
+    art: memoryArt,
+    component: lazy(() => import('./memory/Memory')),
+    resume: memorySummary,
   },
   {
     id: 'crossword',
@@ -103,5 +161,12 @@ export const GAMES: GameEntry[] = [
     art: crosswordArt,
     component: lazy(() => import('./crossword/Crossword')),
     resume: crosswordSummary,
+  },
+  {
+    id: 'mahjong',
+    name: 'Mahjong',
+    blurb: 'Tile matching',
+    accent: 'var(--mahjong)',
+    art: mahjongArt,
   },
 ];

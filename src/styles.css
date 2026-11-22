@@ -14,6 +14,9 @@
   --solitaire: #17875d;
   --mahjong: #c94a26;
   --crossword: #a26c00;
+  --freecell: #2b6cb0;
+  --spider: #6b46c1;
+  --memory: #b45309;
 
   --accent: var(--sudoku);
   --radius: 16px;
@@ -40,6 +43,9 @@
   --solitaire: #52d1a2;
   --mahjong: #ff8d6b;
   --crossword: #f2b84b;
+  --freecell: #7fb4f0;
+  --spider: #b79cf5;
+  --memory: #f6ad6b;
 
   color-scheme: dark;
 }

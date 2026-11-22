@@ -6,6 +6,9 @@ A suite of classic games for phones, built as one installable, offline web app.
 | --- | --- |
 | Sudoku | Playable |
 | Solitaire (Klondike, draw one or three) | Playable |
+| FreeCell | Playable |
+| Spider (one, two or four suits) | Playable |
+| Memory pairs | Playable |
 | Mahjong (tile matching) | Planned |
 | Crosswords (60 puzzles each in English, Portuguese and Spanish) | Playable |
 
@@ -31,6 +34,8 @@ The public copy of this project is `lpr16/cellgamespub`. Every push to its defau
 
 - `src/shell/` — home screen, settings, saving, shared sheets and buttons.
 - `src/games/registry.tsx` — the list of games; each one loads only when opened.
+- `src/games/cards/` — the table shared by the card games: drawing, dragging and animating cards,
+  undo, hints, saving and statistics. Klondike, FreeCell and Spider each supply only their rules.
 - `src/games/<game>/` — one folder per game. Rules live in plain TypeScript
   (`logic.ts`, `state.ts`) with tests beside them; the screen is a separate React component.
 
