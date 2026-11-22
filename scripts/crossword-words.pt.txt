@@ -1,0 +1,1093 @@
+# Respostas e dicas para o gerador de palavras cruzadas, uma por linha: RESPOSTA|Dica
+# Respostas com 3 a 7 letras, escritas com acentos e cedilha (o gerador os remove).
+# Execute `npm run crosswords` depois de editar.
+
+# ---- 3 letras ----
+ABA|Parte do chapéu que faz sombra
+AÇO|Liga de ferro muito resistente
+ALA|Grupo que desfila na escola de samba
+ALI|Naquele lugar
+ALÔ|Dito ao atender o telefone
+ANO|Doze meses
+ARO|Círculo de metal da roda da bicicleta
+ASA|O pássaro bate para voar
+ATA|Registro escrito de uma reunião
+ATO|Cada parte de uma peça de teatro
+AVE|Animal de penas e bico
+AVÔ|Pai do pai ou da mãe
+BAR|Lugar que serve bebidas e petiscos
+BAÚ|Caixa grande com tampa para guardar coisas
+BEM|O contrário de mal
+BIS|Pedido de repetição no fim do show
+BOI|Animal de chifres que pasta no campo
+BOM|O contrário de ruim
+CAL|Pó branco usado para pintar muros
+CÃO|Melhor amigo do homem
+CEM|Dez vezes dez
+CÉU|Onde ficam as nuvens e as estrelas
+CHÁ|Bebida quente feita com ervas
+COR|Azul, verde ou vermelho
+CRU|Que não foi cozido
+DAR|Entregar de presente
+DEZ|Número de dedos das mãos
+DIA|Vinte e quatro horas
+DOM|Talento natural
+DUO|Par de músicos que tocam juntos
+ECO|Som que volta na montanha
+ELO|Cada argola de uma corrente
+EMA|Ave grande do cerrado que não voa
+ERA|Longo período da história
+FIM|Ponto final, término
+FIO|Leva a eletricidade até a tomada
+FOZ|Lugar onde o rio encontra o mar
+GÁS|Vem no botijão para acender o fogão
+GEL|Produto para fixar o penteado
+GIZ|Bastão para escrever na lousa
+GOL|Bola na rede no futebol
+IDA|O contrário de volta
+ÍMÃ|Atrai objetos de ferro
+IPÊ|Árvore brasileira de flores amarelas
+LAR|A casa da família
+LEI|Regra que todos devem cumprir
+LER|Passar os olhos por um livro
+LUA|Brilha no céu à noite e muda de fase
+LUZ|Clareia o que está escuro
+MÃE|Mulher que tem filhos
+MAL|O contrário de bem
+MÃO|Tem palma e cinco dedos
+MAR|Imensidão de água salgada
+MAU|O contrário de bom
+MEL|Doce produzido pelas abelhas
+MÊS|Janeiro ou fevereiro
+MIL|Dez vezes cem
+NÃO|O contrário de sim
+NAU|Antigo navio a vela
+NOZ|Fruto seco de casca dura
+OBA|Grito de alegria
+OCA|Casa indígena
+OCO|Vazio por dentro
+OLÁ|Cumprimento de quem chega
+OVO|A galinha bota
+PAI|Homem que tem filhos
+PÃO|Comprado quentinho na padaria
+PAR|Dois sapatos formam um
+PAZ|Sossego, tranquilidade
+PIA|Onde se lava a louça
+PIO|Som do passarinho
+PÔR|Colocar
+REI|Usa coroa e mora no castelo
+RIO|Curso de água doce
+RIR|Achar graça e dar gargalhadas
+RUA|Caminho entre as casas da cidade
+SAL|Tempero branco tirado do mar
+SIM|Resposta de quem concorda
+SOL|Estrela que ilumina o dia
+SOM|Tudo o que se ouve
+SUL|O contrário de norte
+TER|Possuir
+TIA|Irmã do pai ou da mãe
+TIO|Irmão do pai ou da mãe
+TOM|Altura do som na música
+UFA|Exclamação de alívio
+UVA|Fruta que dá em cachos
+VER|Perceber com os olhos
+VÉU|Tecido fino que cobre o rosto da noiva
+VEZ|Momento de cada um jogar
+VIA|Caminho, estrada
+VIR|Chegar até aqui
+VOO|Viagem de avião pelos ares
+VOZ|Som que sai da garganta ao falar
+
+# ---- 4 letras ----
+AÇAÍ|Fruta roxa da Amazônia
+ÁGUA|Líquido que mata a sede
+ALHO|Tempero que vem em dentes
+ALTO|O contrário de baixo
+AMAR|Querer muito bem
+AMOR|Carinho profundo por alguém
+ANEL|Joia usada no dedo
+ANJO|Ser celestial com asas
+AQUI|Neste lugar
+ARAR|Preparar a terra para o plantio
+ARCO|Usado para lançar flechas
+ARTE|Pintura, música ou dança
+ATUM|Peixe vendido em lata
+AULA|Lição dada pelo professor
+AZUL|Cor do céu sem nuvens
+BALA|Doce pequeno embrulhado em papel
+BEBÊ|Criança de colo
+BECO|Rua estreita e curta
+BELO|Bonito, formoso
+BICO|Boca do pássaro
+BIFE|Fatia de carne frita na frigideira
+BOCA|Usada para falar e comer
+BODE|Macho da cabra
+BOLA|Brinquedo redondo que rola e quica
+BOLO|Doce da festa de aniversário
+BONÉ|Chapéu com aba só na frente
+BOTA|Calçado de cano alto
+BOTO|Golfinho dos rios da Amazônia
+BULE|Recipiente com bico para servir café
+CABO|Parte da panela por onde se segura
+CAFÉ|Bebida escura e quente da manhã
+CAIS|Lugar onde os barcos atracam
+CAJU|Fruta que tem castanha
+CAMA|Móvel para dormir
+CANA|Planta de onde vem o açúcar
+CANO|Por ele a água chega à torneira
+CAPA|Parte de fora do livro
+CARO|Que custa muito
+CASA|Lugar onde se mora
+CEDO|O contrário de tarde
+CEIA|Refeição da noite de Natal
+CENA|Parte de um filme ou de uma peça
+CERA|Material da vela
+CHÃO|Onde pisamos
+CIPÓ|Planta em que o macaco se balança
+COCO|Fruto da praia cheio de água doce
+COLA|Serve para grudar papel
+COLO|Lugar onde a mãe aconchega o bebê
+COPA|Parte de cima da árvore
+COPO|Usado para beber água
+CRER|Acreditar
+CUBO|Sólido de seis faces quadradas
+CUME|Topo da montanha
+DADO|Cubo com pontos usado em jogos
+DAMA|Carta do baralho entre o valete e o rei
+DATA|Dia, mês e ano
+DEDO|A mão tem cinco
+DICA|Pequena ajuda para acertar a resposta
+DOAR|Oferecer sem cobrar nada
+DOCE|O contrário de salgado
+DOIS|Um mais um
+DONO|Proprietário
+DOZE|Número de meses do ano
+DUNA|Monte de areia do deserto
+DURO|O contrário de mole
+ÉGUA|Fêmea do cavalo
+EIXO|Barra em torno da qual a roda gira
+ERVA|Planta usada em chás e temperos
+FACA|Talher que corta
+FADA|Personagem com varinha de condão
+FAVO|Onde as abelhas guardam o mel
+FIEL|Leal
+FIGO|Fruta macia de casca roxa
+FILA|Pessoas esperando uma atrás da outra
+FINO|O contrário de grosso
+FITA|Tira de tecido para amarrar presentes
+FLOR|Rosa ou margarida
+FOCA|Animal marinho que equilibra bolas
+FOGO|Chamas
+FOME|Vontade de comer
+FOTO|Imagem tirada com a câmera
+FRIO|O contrário de quente
+FUBÁ|Farinha de milho
+FURO|Buraco pequeno
+GALO|Canta ao amanhecer
+GATO|Felino doméstico
+GELO|Água em estado sólido
+GEMA|Parte amarela do ovo
+GIBI|Revista em quadrinhos
+GIRO|Volta completa
+GOLE|Porção de líquido que se bebe de uma vez
+GOTA|Pingo de chuva
+GRÃO|Semente de arroz ou de feijão
+GUIA|Quem mostra o caminho aos turistas
+HINO|Canção oficial de um país
+HOJE|O dia em que estamos
+HORA|Sessenta minutos
+IATE|Barco de luxo
+ILHA|Terra cercada de água
+IOIÔ|Brinquedo que sobe e desce no cordão
+ÍRIS|Parte colorida do olho
+IRMÃ|Filha dos mesmos pais
+ISCA|Vai no anzol para atrair o peixe
+JACA|Fruta enorme de casca áspera
+JATO|Avião muito rápido
+JOGO|Dominó ou xadrez
+JOIA|Anel, colar ou brinco
+JUBA|Cabeleira do leão
+JUIZ|Apita a partida de futebol
+LAÇO|Nó enfeitado feito com fita
+LAGO|Grande porção de água cercada de terra
+LAMA|Terra molhada
+LATA|Embalagem de metal
+LEÃO|Rei da selva
+LEME|Peça que dá direção ao barco
+LEVE|O contrário de pesado
+LIMA|Fruta cítrica parecida com a laranja
+LISO|Sem rugas nem ondas
+LIXO|O que se joga fora
+LOBO|Animal que uiva para a lua
+LOJA|Lugar onde se compram coisas
+LONA|Tecido grosso da tenda do circo
+LUAR|Brilho prateado das noites claras
+LUPA|Lente que aumenta as letras
+LUVA|Peça que aquece as mãos
+LUXO|Riqueza e conforto em excesso
+MAÇÃ|Fruta que a Branca de Neve mordeu
+MAGO|Faz feitiços nas histórias
+MAIO|Mês do Dia das Mães
+MALA|Bagagem de viagem
+MAPA|Desenho que mostra cidades e estradas
+MARÉ|Sobe e desce das águas na praia
+MATA|Floresta
+MEIA|Peça de roupa que veste o pé
+MEIO|Ponto central, nem começo nem fim
+MESA|Móvel onde se fazem as refeições
+MIAR|Fazer o som do gato
+MICO|Macaco pequeno
+MIMO|Presente delicado, agrado
+MITO|História lendária
+MOÇA|Mulher jovem
+MODA|O que todos estão vestindo
+MOLA|Espiral de metal do colchão
+MOLE|O contrário de duro
+MUDA|Planta jovem para replantar
+MURO|Parede que cerca o quintal
+NADA|Coisa nenhuma
+NATA|Creme que se forma no leite
+NAVE|Veículo espacial
+NETO|Filho do filho
+NEVE|Flocos brancos que caem no frio
+NOME|Como a pessoa se chama
+NORA|Esposa do filho
+NOTA|Dó, ré ou mi
+NOVE|Oito mais um
+NOVO|Que acabou de ser feito
+OBRA|Construção em andamento
+OITO|Sete mais um
+ÓLEO|Usado para fritar
+OLHO|Órgão da visão
+ONÇA|Felino pintado das matas brasileiras
+ONDA|O surfista desliza sobre ela
+ORAR|Conversar com Deus
+ORLA|Faixa à beira-mar
+OSSO|O cachorro gosta de roer
+OURO|Metal precioso amarelo
+OVAL|De forma redonda e alongada
+PAÍS|Brasil ou Portugal
+PATA|Pé de animal
+PATO|Ave que faz quá-quá
+PEÃO|Peça mais simples do xadrez
+PELE|Cobre todo o corpo
+PENA|Cobre o corpo das aves
+PERA|Fruta de base larga e ponta fina
+PERU|Ave servida na ceia de Natal
+PESO|O que a balança mede
+PIÃO|Brinquedo que gira com um barbante
+PICO|Ponta mais alta do morro
+PIPA|Brinquedo de papel que voa preso à linha
+PISO|Revestimento do chão
+POÇO|Buraco fundo de onde se tira água
+POLO|Região gelada no extremo da Terra
+POTE|Vasilha com tampa
+POVO|Conjunto dos habitantes de um país
+PULO|Salto
+PURÊ|Batata amassada com leite
+RABO|Cauda do cachorro
+RAIO|Clarão no céu durante a tempestade
+RAIZ|Parte da planta que fica sob a terra
+RALO|Por onde a água da pia escoa
+RAMO|Galho pequeno
+RASO|O contrário de fundo
+RATO|Roedor que foge do gato
+REDE|Balança na varanda para descansar
+REMO|Usado para mover a canoa
+RETA|Linha sem curvas
+RICO|Que tem muito dinheiro
+RIFA|Sorteio com bilhetes numerados
+RIMA|Sons iguais no fim dos versos
+RISO|Gargalhada
+RODA|O carro tem quatro
+ROLO|Cilindro para abrir massa de pastel
+ROSA|Flor com espinhos
+ROTA|Caminho traçado para a viagem
+ROXO|Cor da berinjela
+RUBI|Pedra preciosa vermelha
+RUMO|Direção
+SACO|Embalagem de pano ou de papel
+SAIA|Roupa feminina da cintura para baixo
+SAIR|Ir para fora
+SALA|Cômodo do sofá e da televisão
+SAPO|Animal que coaxa na lagoa
+SEDA|Tecido fino feito por um bicho
+SEDE|Vontade de beber água
+SEIS|Meia dúzia
+SELO|Colado no envelope da carta
+SETE|Número de cores do arco-íris
+SINO|Toca na torre da igreja
+SIRI|Parente do caranguejo
+SOFÁ|Móvel estofado da sala
+SOJA|Grão usado para fazer óleo
+SOLO|Terra onde se planta
+SOMA|Resultado da adição
+SONO|Vontade de dormir
+SOPA|Caldo quente servido no prato fundo
+SUCO|Bebida feita de fruta
+TAÇA|Copo com pé
+TATO|Sentido que percebe o toque
+TATU|Animal de casca dura que cava buracos
+TÁXI|Carro de aluguel com motorista
+TEIA|A aranha tece
+TELA|O pintor pinta sobre ela
+TEMA|Assunto
+TETO|Parte de cima do cômodo
+TIME|Equipe de futebol
+TOCA|Casa do coelho
+TREM|Anda sobre trilhos
+TRÊS|Dois mais um
+TRIO|Conjunto de músicos menor que um quarteto
+TUBO|Embalagem da pasta de dente
+UNHA|Fica na ponta do dedo
+UNIR|Juntar
+URNA|Caixa onde se deposita o voto
+URSO|Animal grande que gosta de mel
+USAR|Empregar, utilizar
+ÚTIL|Que serve para alguma coisa
+VACA|Dá leite
+VAGA|Lugar para estacionar o carro
+VALE|Terra baixa entre montanhas
+VARA|Haste comprida do pescador
+VASO|Recipiente para flores
+VELA|Ilumina quando falta luz
+VIDA|Existência
+VILA|Povoado pequeno
+VOAR|O que os pássaros fazem no céu
+VOTO|Escolha do eleitor
+VOVÓ|Jeito carinhoso de chamar a mãe da mãe
+XALE|Manta para cobrir os ombros
+ZELO|Cuidado, capricho
+ZERO|Número antes do um
+
+# ---- 5 letras ----
+ABRIL|Quarto mês do ano
+ABRIR|O contrário de fechar
+ACHAR|Encontrar
+AÇUDE|Represa do sertão
+AGORA|Neste momento
+ÁGUIA|Ave de rapina de olhar afiado
+AJUDA|Auxílio
+ALTAR|Mesa principal da igreja
+ALUNO|Quem estuda na escola
+AMIGO|Companheiro querido
+AMORA|Frutinha roxa que mancha os dedos
+AMPLO|Espaçoso
+ANDAR|Caminhar
+ANTES|O contrário de depois
+ANZOL|Gancho na ponta da linha de pesca
+APITO|O juiz sopra no jogo
+ARAME|Fio de metal da cerca
+ARARA|Ave colorida de bico curvo
+AREIA|Cobre a praia
+AROMA|Cheiro agradável
+ARROZ|Par do feijão no prato
+ASSAR|Cozinhar no forno
+ASTRO|Sol, lua ou estrela
+ATLAS|Livro de mapas
+ATRIZ|Mulher que trabalha em novelas e filmes
+AVEIA|Cereal em flocos do mingau
+AVIÃO|Transporte que voa
+AVISO|Recado de alerta
+AZEDO|Gosto do limão
+BACIA|Recipiente largo e raso para lavar
+BAIXO|O contrário de alto
+BALÃO|Sobe ao céu cheio de ar quente
+BALDE|Recipiente com alça para carregar água
+BAMBU|Planta de caule oco e comprido
+BANCO|Assento da praça
+BANDA|Grupo de músicos
+BANHO|Hora de se lavar no chuveiro
+BARBA|Pelos do rosto do homem
+BARCO|Navega em rios e lagos
+BARRO|Argila
+BEBER|Tomar um líquido
+BEIJO|Carinho dado com os lábios
+BERÇO|Cama do bebê
+BICHO|Animal
+BLUSA|Roupa feminina que cobre o tronco
+BOLHA|Esfera de sabão que flutua
+BOLSA|Acessório para levar carteira e chaves
+BORDA|Beirada
+BOTÃO|Fecha a camisa
+BRAÇO|Membro que tem cotovelo
+BREJO|Terreno alagado
+BRISA|Vento leve e fresco
+BROTO|Planta que acaba de nascer
+BUQUÊ|Ramo de flores da noiva
+BURRO|Animal de carga de orelhas compridas
+CABRA|Animal de chifres que dá leite
+CACAU|Fruto do qual se faz o chocolate
+CACHO|Conjunto de uvas ou de bananas
+CAIXA|Embalagem de papelão
+CALÇA|Roupa que cobre as pernas
+CALDO|Líquido saboroso da sopa
+CALMA|Tranquilidade
+CALOR|Sensação dos dias de verão
+CAMPO|Onde se joga futebol
+CANAL|Emissora de televisão
+CANJA|Sopa de galinha com arroz
+CANOA|Barco estreito movido a remo
+CANTO|Encontro de duas paredes
+CAPIM|Grama alta que o gado come
+CAQUI|Fruta alaranjada e macia do outono
+CARNE|Alimento vendido no açougue
+CARRO|Automóvel
+CARTA|Mensagem enviada pelo correio
+CASAL|Marido e mulher
+CASCA|Parte de fora da fruta
+CAULE|Haste da planta
+CAVAR|Abrir um buraco na terra
+CERCA|Divisa de madeira ou de arame
+CERTO|Correto
+CESTA|Leva as frutas do piquenique
+CHALÉ|Casa de madeira na montanha
+CHAVE|Abre a fechadura
+CHEFE|Quem manda no trabalho
+CHEIO|O contrário de vazio
+CHUVA|Água que cai das nuvens
+CINCO|Dedos de uma mão
+CINTO|Tira de couro que segura a calça
+CIRCO|Espetáculo com palhaços e trapezistas
+CISNE|Ave branca de pescoço longo
+CLARO|O contrário de escuro
+CLIMA|Pode ser tropical ou temperado
+CLUBE|Lugar com piscina e quadras para sócios
+COBRA|Réptil sem pernas
+COBRE|Metal avermelhado dos fios
+COFRE|Caixa forte para guardar dinheiro
+COISA|Objeto qualquer
+COLAR|Joia usada no pescoço
+COMER|Fazer uma refeição
+CONTA|Chega no fim do jantar no restaurante
+CONTO|História curta
+CORAL|Grupo de pessoas que cantam juntas
+CORDA|Usada para pular ou amarrar
+COROA|Enfeite na cabeça do rei
+CORPO|Cabeça, tronco e membros
+COSTA|Litoral
+COURO|Material de sapatos e bolsas
+COUVE|Verdura de folhas servida refogada
+CRAVO|Flor ou tempero de doces
+CREME|Recheio macio de doces
+CRIAR|Inventar
+CURVA|Trecho da estrada que não é reto
+DANÇA|Valsa ou samba
+DEDAL|Protege quem costura das espetadas
+DENTE|Fica na boca e serve para mastigar
+DISCO|Objeto redondo de vinil com músicas
+DIZER|Falar
+DUETO|Música cantada por duas vozes
+DUPLA|Par de cantores sertanejos
+DÚZIA|Quantidade de ovos numa caixa
+ÉPOCA|Período de tempo
+ETAPA|Fase
+EXATO|Preciso
+ÊXITO|Sucesso
+FAIXA|Por onde o pedestre atravessa a rua
+FALAR|Dizer palavras
+FAROL|Torre que guia os navios à noite
+FATIA|Pedaço de bolo ou de pão
+FAUNA|Conjunto dos animais de uma região
+FAVOR|Gentileza feita a alguém
+FAZER|Realizar
+FEIRA|Mercado de rua com frutas e verduras
+FELIZ|Contente
+FERRO|Metal de portões e grades
+FESTA|Comemoração com bolo e convidados
+FILHO|Menino em relação aos pais
+FILME|Passa no cinema
+FINAL|Último jogo do campeonato
+FLORA|Conjunto das plantas de uma região
+FOGÃO|Onde se cozinha a comida
+FOLHA|Parte verde da planta
+FOLIA|Alegria do carnaval
+FONTE|Lugar de onde brota a água
+FORNO|Onde se assa o bolo
+FORRÓ|Dança nordestina com sanfona
+FORTE|O contrário de fraco
+FRASE|Conjunto de palavras com sentido
+FRUTA|Banana, manga ou laranja
+FUNDO|O contrário de raso
+FUNIL|Ajuda a encher garrafas sem derramar
+GAITA|Pequeno instrumento de sopro de bolso
+GALHO|Braço da árvore
+GANSO|Ave parente do pato, de pescoço longo
+GARFO|Talher com dentes
+GAROA|Chuva fina
+GARRA|Unha afiada da águia
+GEADA|Camada branca e fria no campo ao amanhecer
+GENRO|Marido da filha
+GENTE|Pessoas
+GESTO|Movimento feito com as mãos
+GIRAR|Rodar
+GLOBO|Esfera que representa a Terra
+GORRO|Touca de lã para o frio
+GOSTO|Paladar
+GRAMA|Cobre o jardim e o campo de futebol
+GRILO|Inseto que canta à noite
+GRUPO|Conjunto de pessoas
+GRUTA|Abertura natural na rocha
+HERÓI|Salva o dia nas histórias
+HORTA|Canteiro de verduras e legumes
+HOTEL|Lugar para se hospedar em viagem
+HUMOR|Disposição para rir
+IDADE|Anos de vida
+IDEIA|Pensamento novo
+IGUAL|Sem diferença
+IRMÃO|Filho dos mesmos pais
+JARRA|Recipiente para servir suco
+JOGAR|Brincar com bola ou cartas
+JOVEM|Que tem pouca idade
+JUNHO|Mês das festas de São João
+JUNTO|Ao lado, em companhia
+LAGOA|Extensão de água calma e pouco funda
+LÁPIS|Escreve e se apaga com borracha
+LARGO|O contrário de estreito
+LAVAR|Limpar com água e sabão
+LEITE|Bebida branca que vem da vaca
+LENÇO|Pano pequeno levado no bolso
+LENTO|Devagar
+LEQUE|Abana para refrescar
+LESTE|Lado onde o sol nasce
+LETRA|A, B ou C
+LEVAR|Carregar de um lugar a outro
+LIÇÃO|Tarefa da escola
+LIGAR|Fazer uma chamada telefônica
+LIMÃO|Fruta verde e azeda
+LIMPO|O contrário de sujo
+LINDO|Muito bonito
+LINHA|Fio para costurar
+LÍRIO|Flor branca e perfumada
+LIVRO|Tem capa, páginas e história
+LONGE|O contrário de perto
+LOUÇA|Pratos e xícaras
+LOUSA|Quadro onde o professor escreve
+LUGAR|Local
+MACIO|Fofo ao toque
+MAGIA|Arte dos feiticeiros
+MALHA|Tecido das camisetas
+MAMÃO|Fruta alaranjada com sementes pretas
+MANGA|Fruta amarela e doce de caroço grande
+MANHÃ|Começo do dia
+MANSO|Dócil
+MANTA|Cobertor leve
+MARÇO|Terceiro mês do ano
+MASSA|Macarrão ou lasanha
+MEDIR|Usar a régua ou a trena
+MEIGO|Doce e carinhoso
+MELÃO|Fruta grande de polpa clara e doce
+MENOS|Sinal da subtração
+MENTA|Sabor refrescante de balas e chicletes
+METAL|Ferro, cobre ou ouro
+METRO|Unidade usada para vender tecido
+MILHO|Grão da pipoca
+MOEDA|Dinheiro de metal
+MOLHO|Acompanha o macarrão
+MORAR|Residir
+MORNO|Nem quente nem frio
+MORRO|Pequena montanha
+MOTOR|Faz o carro andar
+MUDAR|Trocar de casa ou de ideia
+MUITO|O contrário de pouco
+MUNDO|O planeta inteiro
+MUSEU|Lugar de exposições e obras antigas
+NAÇÃO|País e seu povo
+NADAR|Mover-se na água
+NARIZ|Órgão do olfato
+NAVIO|Grande embarcação
+NINAR|Cantar para o bebê dormir
+NINHO|Casa dos passarinhos
+NOITE|Período escuro do dia
+NOIVA|Mulher de véu e grinalda
+NORTE|Para onde aponta a bússola
+NUVEM|Algodão branco no céu
+OESTE|Lado onde o sol se põe
+OLHAR|Dirigir a vista
+ONTEM|O dia antes de hoje
+ÓPERA|Teatro todo cantado
+ORDEM|Cada coisa no seu lugar
+OSTRA|Molusco que produz pérolas
+ÓTIMO|Muito bom
+OUVIR|Escutar
+PADRE|Celebra a missa
+PALCO|Onde os atores se apresentam
+PALHA|Capim seco
+PALMA|Parte de dentro da mão
+PANDA|Urso preto e branco que come bambu
+PAPEL|Folha para escrever
+PARAR|Deixar de andar
+PASSO|Movimento dos pés ao andar
+PASTA|Usada para escovar os dentes
+PASTO|Campo onde o gado come
+PATIM|Calçado com rodinhas
+PÁTIO|Área aberta da escola para o recreio
+PAVÃO|Ave que abre a cauda em leque
+PEDAL|Peça da bicicleta que se empurra para andar
+PEDIR|Solicitar
+PEDRA|Mineral duro encontrado no chão
+PEIXE|Animal com escamas e nadadeiras
+PENTE|Usado para arrumar o cabelo
+PERNA|Membro que tem joelho
+PERTO|O contrário de longe
+PIADA|História curta que faz rir
+PIANO|Instrumento de teclas pretas e brancas
+PILHA|Dá energia ao controle remoto
+PIRES|Pratinho que fica sob a xícara
+PISTA|Onde o avião pousa
+PLACA|Sinal de trânsito na estrada
+PLUMA|Pena macia e leve
+POEMA|Texto escrito em versos
+POLPA|Parte macia e carnuda da fruta
+POLVO|Animal marinho de oito braços
+POMAR|Terreno com árvores de frutas
+POMBO|Ave comum nas praças
+PONTE|Liga as duas margens do rio
+PONTO|Sinal no fim da frase
+PORCO|Animal de rabo enrolado do chiqueiro
+PORTA|Abre-se para entrar em casa
+PORTO|Lugar onde chegam os navios
+POSTE|Sustenta os fios de luz na rua
+POTRO|Filhote do cavalo
+POUCO|O contrário de muito
+PRAÇA|Largo com bancos e jardim
+PRAIA|Areia, sol e mar
+PRATA|Metal da medalha do segundo lugar
+PRATO|Louça onde se serve a comida
+PRECE|Oração
+PREÇO|Quanto custa
+PRETO|Cor do carvão
+PRIMO|Filho do tio
+PROSA|Texto que não é escrito em versos
+PUDIM|Sobremesa de leite com calda de caramelo
+PULAR|Saltar
+QUILO|Mil gramas
+RÁDIO|Aparelho que toca músicas e notícias
+RAMPA|Subida inclinada sem degraus
+RAPAZ|Moço
+REGAR|Molhar as plantas
+RÉGUA|Serve para traçar linhas retas
+REINO|Terra de príncipes e princesas
+REMAR|Impulsionar a canoa
+RENDA|Tecido delicado cheio de furinhos
+REZAR|Fazer uma prece
+RITMO|Batida da música
+ROCHA|Pedra grande
+ROLHA|Tampa da garrafa de vinho
+ROSCA|Pão doce em forma de anel
+ROUPA|Camisa, calça ou vestido
+RUÍDO|Barulho
+RURAL|Do campo
+SABÃO|Usado para lavar roupa
+SABER|Ter conhecimento
+SABIÁ|Pássaro cantor de peito alaranjado
+SABOR|Doce, salgado ou azedo
+SAFRA|Colheita do ano
+SALÃO|Espaço amplo para bailes
+SALSA|Tempero verde, par da cebolinha
+SALTO|Parte alta do sapato feminino
+SAMBA|Ritmo do carnaval
+SANTO|Tem imagem no altar da igreja
+SAÚDE|Dito quando alguém espirra
+SECAR|Tirar a umidade
+SELVA|Floresta fechada
+SERRA|Ferramenta para cortar madeira
+SINAL|Fica verde para o carro passar
+SÍTIO|Pequena propriedade rural
+SOGRA|Mãe do marido ou da esposa
+SONHO|História que se vive dormindo
+SORTE|O trevo de quatro folhas traz
+SUAVE|Macio, delicado
+SUBIR|Ir para cima
+TACHO|Panela grande de cobre para doces
+TALCO|Pó perfumado para o bebê
+TAMPA|Fecha a panela
+TARDE|Período entre o almoço e a noite
+TECER|Entrelaçar fios para fazer pano
+TECLA|Cada botão do piano ou do computador
+TELHA|Peça de barro que cobre a casa
+TEMPO|O relógio marca
+TENDA|Abrigo de lona
+TÊNIS|Calçado para caminhar e correr
+TENOR|Cantor de voz aguda na ópera
+TERÇO|Colar de contas para rezar
+TERNO|Paletó e calça do mesmo tecido
+TERRA|Nosso planeta
+TEXTO|Conjunto de frases escritas
+TIGRE|Felino listrado
+TINTA|Usada para pintar paredes
+TOCAR|Fazer soar um instrumento
+TOLDO|Cobertura de lona contra o sol
+TORRE|Construção alta e estreita
+TORTA|Massa recheada assada
+TOURO|Bovino bravo de chifres
+TRAÇO|Risco feito com o lápis
+TRAJE|Roupa para uma ocasião especial
+TRENÓ|Veículo do Papai Noel
+TREVO|Planta que dá sorte se tiver quatro folhas
+TRICÔ|Trabalho feito com duas agulhas e lã
+TRIGO|Cereal da farinha do pão
+TROCO|Dinheiro devolvido ao pagar
+TÚNEL|Passagem por dentro da montanha
+TURMA|Grupo de alunos ou de amigos
+UNIÃO|Junção
+ÚNICO|Sem outro igual
+VAGEM|Legume verde e comprido
+VALSA|Dança dos quinze anos
+VAPOR|Sai da chaleira com água fervendo
+VARAL|Onde se pendura a roupa para secar
+VAZIO|Sem nada dentro
+VELOZ|Muito rápido
+VENTO|Ar em movimento
+VERÃO|Estação mais quente do ano
+VERDE|Cor das folhas
+VERSO|Cada linha de um poema
+VIDRO|Material da janela
+VINHO|Bebida feita de uva
+VIOLA|Instrumento da música caipira
+VISTA|Paisagem apreciada da janela
+VIVER|Aproveitar cada dia
+VOGAL|A, E, I, O ou U
+VÔLEI|Esporte de rede alta jogado com as mãos
+VOLTA|Retorno
+XAMPU|Usado para lavar o cabelo
+ZEBRA|Animal africano listrado de preto e branco
+ZÍPER|Fecho de calças e bolsas
+
+# ---- 6 letras ----
+ABELHA|Inseto que faz mel
+ABRAÇO|Aperto carinhoso entre duas pessoas
+AÇÚCAR|Adoça o café
+ADULTO|Pessoa crescida
+AGOSTO|Oitavo mês do ano
+AGULHA|Usada com a linha para costurar
+ALDEIA|Pequeno povoado
+ALEGRE|Contente, animado
+ALFACE|Folha verde da salada
+ALMOÇO|Refeição do meio-dia
+ALTURA|Medida dos pés à cabeça
+AMANHÃ|O dia depois de hoje
+AMARGO|Gosto do café sem açúcar
+AMEIXA|Fruta roxa de caroço
+ANIMAL|Bicho
+ANTENA|Capta o sinal da televisão
+ANTIGO|De outros tempos
+ARANHA|Tece teias e tem oito patas
+ÁRVORE|Tem tronco, galhos e folhas
+AZEITE|Óleo de oliva
+BALEIA|Maior animal do mar
+BANANA|Fruta amarela que dá em cachos
+BARATO|Que custa pouco
+BATATA|Legume das fritas
+BEBIDA|Suco, água ou refrigerante
+BIGODE|Pelos sobre o lábio do homem
+BONECA|Brinquedo em forma de menina
+BONITO|Agradável de se ver
+BORDAR|Enfeitar o tecido com agulha e linha
+BRANCO|Cor da neve
+BRINCO|Enfeite da orelha
+BÚFALO|Bovino grande de chifres curvos
+BUZINA|Som de alerta do carro
+CABEÇA|Parte do corpo onde fica o cérebro
+CABELO|Fios que o pente arruma
+CAMELO|Animal do deserto com corcovas
+CÂMERA|Aparelho que tira fotos
+CAMISA|Roupa com gola e botões
+CANECA|Copo com alça
+CANELA|Tempero em pau do arroz-doce
+CANETA|Escreve com tinta
+CANTAR|Soltar a voz numa música
+CANTOR|Artista que solta a voz no palco
+CAPELA|Igreja pequena
+CARTAZ|Anúncio grande colado na parede
+CASACO|Agasalho para o frio
+CAVALO|Animal que galopa
+CEBOLA|Faz chorar quando é cortada
+CEREJA|Frutinha vermelha do topo do bolo
+CHAPÉU|Protege a cabeça do sol
+CHEIRO|Percebido pelo nariz
+CIDADE|Lugar com muitas ruas e prédios
+CINEMA|Sala de filmes com tela grande
+COELHO|Animal de orelhas compridas que pula
+COLEGA|Companheiro de trabalho ou de escola
+COLHER|Talher da sopa
+COLINA|Pequena elevação do terreno
+COMIDA|Alimento
+CONCHA|Achada na areia da praia
+CORRER|Andar muito depressa
+CORTAR|Dividir com a faca
+CORUJA|Ave noturna de olhos grandes
+CROCHÊ|Trabalho feito com uma agulha de gancho
+CUIDAR|Tomar conta com carinho
+DÉCADA|Os anos 60 ou os anos 70
+DEPOIS|O contrário de antes
+DOMINÓ|Jogo de peças com pontinhos
+DORMIR|Descansar de olhos fechados
+DRAGÃO|Monstro lendário que cospe fogo
+ENIGMA|Charada, mistério
+ESCADA|Tem degraus para subir
+ESCOLA|Lugar onde se aprende
+ESCOVA|Usada para pentear ou limpar os dentes
+ESPAÇO|Onde ficam as estrelas e os planetas
+ESPIGA|Onde ficam os grãos do milho
+ESPOSA|Mulher casada
+ESTOJO|Guarda lápis e canetas
+FÁBULA|História com animais e moral
+FECHAR|O contrário de abrir
+FEIJÃO|Par do arroz no prato
+FIGURA|Imagem, desenho
+FLAUTA|Instrumento de sopro comprido e fino
+FRANGO|Ave servida assada no domingo
+FUTURO|O tempo que ainda virá
+GALOPE|Corrida do cavalo
+GANHAR|Receber um presente
+GAROTO|Menino
+GAVETA|Parte da cômoda que se puxa
+GELEIA|Doce de fruta para passar no pão
+GIRAFA|Animal de pescoço muito comprido
+GOIABA|Fruta de polpa rosada
+GOSTAR|Achar bom
+GRANDE|O contrário de pequeno
+HÉLICE|Pás que giram no ventilador
+IGREJA|Templo cristão
+IMAGEM|Aparece na tela da televisão
+INSETO|Formiga ou borboleta
+JABUTI|Parente da tartaruga que vive na terra
+JACARÉ|Réptil de boca grande dos rios
+JANELA|Abertura na parede por onde entra luz
+JANTAR|Refeição da noite
+JARDIM|Terreno com flores e plantas
+JASMIM|Flor branca muito perfumada
+JOELHO|Articulação do meio da perna
+JORNAL|Traz as notícias do dia
+LATIDO|Som do cachorro
+LEGUME|Cenoura ou chuchu
+LENÇOL|Roupa de cama
+LIMPAR|Tirar a sujeira
+MACACO|Animal que adora banana
+MÁGICO|Tira coelho da cartola
+MARGEM|Beira do rio
+MARIDO|Homem casado
+MENINA|Garota
+MINUTO|Sessenta segundos
+MOINHO|Construção com pás que giram ao vento
+MÚSICA|Arte dos sons e das melodias
+NASCER|Vir ao mundo
+NOVELA|História em capítulos na televisão
+NÚMERO|Sete ou vinte
+OCEANO|Atlântico ou Pacífico
+ÓCULOS|Usado para enxergar melhor
+ORELHA|Parte de fora do ouvido
+ORIGEM|Começo, ponto de partida
+OUTONO|Estação em que as folhas caem
+OUVIDO|Órgão da audição
+OVELHA|Animal que dá lã
+PACOTE|Embrulho
+PÁGINA|Cada lado da folha de um livro
+PAIXÃO|Amor muito forte
+PALITO|Pauzinho de madeira para os dentes
+PANELA|Onde se cozinha o feijão
+PAREDE|Divide os cômodos da casa
+PARQUE|Área verde com brinquedos
+PASTEL|Salgado frito da feira
+PEDAÇO|Parte de um todo
+PEPINO|Legume verde e comprido da salada
+PÉROLA|Joia que nasce dentro da ostra
+PESCAR|Passar horas com vara e anzol
+PIJAMA|Roupa de dormir
+PINCEL|Instrumento do pintor
+PIPOCA|Milho estourado do cinema
+PIRATA|Ladrão dos mares com tapa-olho
+PISCAR|Abrir e fechar os olhos depressa
+PLANTA|Ser vivo com raiz e folhas
+POESIA|Arte de escrever versos
+PORTÃO|Entrada da garagem ou do jardim
+POSTAL|Cartão enviado de uma viagem
+PRAZER|Alegria, satisfação
+PRÉDIO|Edifício
+QUADRO|Pintura pendurada na parede
+QUARTO|Cômodo de dormir
+QUEIJO|Derivado do leite, par da goiabada
+QUENTE|O contrário de frio
+RAINHA|Peça mais poderosa do xadrez
+RAPOSA|Animal esperto de cauda peluda
+RECADO|Mensagem curta
+RIACHO|Pequeno curso de água
+SÁBADO|Dia antes do domingo
+SACOLA|Leva as compras do mercado
+SALADA|Alface e tomate temperados
+SAPATO|Calçado
+SEMANA|Sete dias
+SEREIA|Metade mulher, metade peixe
+SOMBRA|Lugar fresco sob a árvore
+TALHER|Garfo, faca ou colher
+TAMBOR|Instrumento que se bate com baquetas
+TAPETE|Cobre o chão da sala
+TEATRO|Lugar de peças e espetáculos
+TECIDO|Pano
+TIGELA|Vasilha funda para sopa ou cereal
+TIJOLO|Bloco de barro das paredes
+TOALHA|Usada para se enxugar
+TOMADA|Onde se liga o aparelho na parede
+TOMATE|Fruto vermelho da salada e do molho
+TRANÇA|Penteado de mechas entrelaçadas
+TRILHA|Caminho estreito na mata
+TROFÉU|Prêmio do campeão
+TROVÃO|Estrondo depois do relâmpago
+TUCANO|Ave de bico grande e colorido
+TULIPA|Flor típica da Holanda
+ÚLTIMO|O contrário de primeiro
+VENCER|Chegar em primeiro lugar
+VIAGEM|Passeio longo a outro lugar
+VIOLÃO|Instrumento de seis cordas
+VISITA|Quem chega para um café em nossa casa
+XADREZ|Jogo de rei, rainha e peões
+XÍCARA|Onde se serve o cafezinho
+
+# ---- 7 letras ----
+ABACATE|Fruta verde de caroço grande
+ABACAXI|Fruta com coroa e casca espinhosa
+ABÓBORA|Legume alaranjado do doce em calda
+ACORDAR|Despertar
+ALECRIM|Erva cheirosa de folhas finas
+ALEGRIA|Felicidade
+ALGODÃO|Fibra branca e macia
+AMARELO|Cor da gema do ovo
+AMÊNDOA|Semente oval usada em doces
+AMIZADE|Laço entre companheiros
+AQUÁRIO|Casa de vidro dos peixes
+ARMÁRIO|Móvel onde se guardam roupas
+AVENIDA|Rua larga e movimentada
+BALANÇA|Aparelho que mede o peso
+BARRIGA|Fica entre o peito e a cintura
+BATERIA|Conjunto de tambores e pratos
+BEZERRO|Filhote da vaca
+BILHETE|Recado escrito num papelzinho
+BOLACHA|Biscoito
+BONDADE|Virtude das pessoas generosas
+BRINCAR|Divertir-se como as crianças
+BÚSSOLA|Aponta sempre para o norte
+CADEIRA|Assento com encosto
+CADERNO|Folhas presas para escrever na escola
+CALÇADA|Parte da rua para os pedestres
+CAMARÃO|Crustáceo pequeno e rosado
+CAMINHO|Trajeto a seguir
+CAMPEÃO|Vencedor do torneio
+CANÁRIO|Pássaro amarelo cantor
+CANTIGA|Música de ninar ou de roda
+CAPITÃO|Comanda o navio
+CARINHO|Afago
+CARROÇA|Veículo puxado por cavalo
+CASTELO|Morada de reis e princesas
+CAVERNA|Morada dos homens pré-históricos
+CENOURA|Legume alaranjado que o coelho adora
+CHÁCARA|Casa de campo com pomar
+CHINELO|Calçado aberto para usar em casa
+CIGARRA|Inseto que canta no verão
+CÍRCULO|Figura redonda
+COLCHÃO|Fica sobre a cama para deitar
+COLEÇÃO|Conjunto de selos ou figurinhas
+COMEÇAR|Dar início
+COMPRAR|Adquirir pagando
+CONVITE|Chamado para uma festa
+CORAÇÃO|Símbolo do amor nos cartões
+CORAGEM|Qualidade dos valentes
+CORREIO|Entrega cartas e encomendas
+CORTINA|Pano que cobre a janela
+COZINHA|Cômodo onde se prepara a comida
+CRIANÇA|Menino ou menina
+DESENHO|Figura feita a lápis
+DESERTO|Região seca e cheia de areia
+DESTINO|Lugar aonde se quer chegar
+DOMINGO|Dia de descanso da semana
+DOURADO|Amarelo brilhante como uma medalha
+ENSINAR|Dar aulas
+ENTRADA|Por onde se chega a um lugar
+ESPELHO|Reflete a nossa imagem
+ESPINHO|Ponta que fura na roseira
+ESPONJA|Usada com detergente para lavar louça
+ESQUILO|Roedor de cauda peluda que come nozes
+ESTAÇÃO|Parada do trem
+ESTÁTUA|Figura esculpida em pedra ou bronze
+ESTRADA|Caminho que liga as cidades
+ESTRELA|Ponto que brilha no céu à noite
+ESTUDAR|Aprender com os livros
+FAMÍLIA|Pais, filhos e avós
+FARINHA|Pó branco usado para fazer pão
+FAZENDA|Grande propriedade rural
+FERIADO|Dia de folga no calendário
+FLANELA|Pano macio para tirar o pó
+FOGUETE|Leva astronautas ao espaço
+FORMIGA|Inseto pequeno que carrega folhas
+GAIVOTA|Ave branca que voa sobre o mar
+GALINHA|Ave que bota ovos
+GARAGEM|Onde se guarda o carro
+GARRAFA|Recipiente de vidro para bebidas
+GRAVATA|Usada no pescoço com camisa social
+HORTELÃ|Erva refrescante do chá e do suco
+INVERNO|Estação mais fria do ano
+JANEIRO|Primeiro mês do ano
+JAQUETA|Casaco curto
+LAGOSTA|Crustáceo grande e saboroso
+LÂMPADA|Acende quando se aperta o interruptor
+LARANJA|Fruta cítrica de suco doce
+LEITURA|Passatempo de quem gosta de livros
+MADEIRA|Material tirado do tronco das árvores
+MÁQUINA|Aparelho com motor e engrenagens
+MARTELO|Ferramenta que bate pregos
+MELODIA|Sequência de notas de uma canção
+MERCADO|Lugar de compras de alimentos
+MERENDA|Lanche da escola
+MOCHILA|Bolsa carregada nas costas
+MOLDURA|Contorna o quadro na parede
+MORANGO|Frutinha vermelha com pontinhos
+NEBLINA|Nuvem baixa que encobre a estrada
+OFICINA|Lugar onde se consertam carros
+OPINIÃO|O que cada um pensa
+ORVALHO|Gotinhas nas plantas ao amanhecer
+OUTUBRO|Décimo mês do ano
+PADARIA|Loja de roscas, sonhos e broas
+PALAVRA|Conjunto de letras com significado
+PALHAÇO|Artista de nariz vermelho do circo
+PÁSSARO|Ave pequena que canta
+PASSEIO|Caminhada para se distrair
+PERFUME|Líquido cheiroso de frasco
+PÊSSEGO|Fruta de casca aveludada
+PETISCO|Comidinha para beliscar
+PIMENTA|Tempero que arde na boca
+PINGUIM|Ave de fraque que vive no gelo
+PINTURA|Arte feita com tintas e pincéis
+PISCINA|Tanque de água para nadar
+PLANETA|Marte ou Vênus
+POLEGAR|Dedo mais grosso da mão
+POLENTA|Creme firme de fubá
+QUERIDO|Muito amado
+QUINTAL|Terreno nos fundos da casa
+RECEITA|Instruções para fazer um prato
+RELÓGIO|Mostra as horas
+REPOLHO|Verdura em forma de bola
+RETRATO|Fotografia de uma pessoa
+ROMANCE|Livro com uma longa história de amor
+ROSEIRA|Planta de flores com espinhos
+SANFONA|Instrumento de fole do forró
+SEGREDO|O que não se conta a ninguém
+SEMENTE|Dela nasce a planta
+SOBRADO|Casa de dois andares
+SORRISO|Expressão de alegria no rosto
+SORVETE|Sobremesa gelada de casquinha
+SUSPIRO|Doce de clara de ovo e açúcar
+TECLADO|Parte do computador com letras
+TELHADO|Cobertura da casa
+TEMPERO|Sal, alho ou pimenta
+TESOURA|Corta papel e tecido
+TESOURO|Riqueza escondida no baú do pirata
+TORRADA|Fatia de pão crocante
+VARANDA|Área aberta na frente da casa
+VERDURA|Alface, couve ou espinafre
+VESTIDO|Roupa feminina de uma peça só
+VINAGRE|Tempero azedo da salada
+VIOLETA|Florzinha roxa de vaso
+VIOLINO|Instrumento de cordas tocado com arco
+VITÓRIA|Conquista de quem ganha
+VIZINHO|Mora na casa ao lado
+VONTADE|Desejo
