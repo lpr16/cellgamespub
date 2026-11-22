@@ -178,7 +178,7 @@ describe('names', () => {
   it('turns ids into titles in the puzzle language', () => {
     expect(puzzleName('m03')).toBe('Medium 3');
     expect(puzzleName('l20')).toBe('Large 20');
-    expect(puzzleName('pt-m03')).toBe('Médio 3');
+    expect(puzzleName('pt-m03')).toBe('Média 3');
     expect(puzzleName('es-s07')).toBe('Pequeño 7');
     expect(parseId('es-l12')).toEqual({ lang: 'es', level: 'l', number: 12 });
   });

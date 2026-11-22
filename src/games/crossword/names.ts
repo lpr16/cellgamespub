@@ -8,7 +8,7 @@ export type LevelKey = (typeof LEVEL_KEYS)[number];
 
 const LEVEL_NAMES: Record<Lang, Record<LevelKey, string>> = {
   en: { s: 'Small', m: 'Medium', l: 'Large' },
-  pt: { s: 'Pequeno', m: 'Médio', l: 'Grande' },
+  pt: { s: 'Pequena', m: 'Média', l: 'Grande' },
   es: { s: 'Pequeño', m: 'Mediano', l: 'Grande' },
 };
 
@@ -21,7 +21,7 @@ export function parseId(id: string): { lang: Lang; level: LevelKey; number: numb
   return { lang: (match[1] as Lang | undefined) ?? 'en', level: match[2] as LevelKey, number: Number(match[3]) };
 }
 
-/** "Medium 3" for "m03", "Médio 3" for "pt-m03". */
+/** "Medium 3" for "m03", "Média 3" for "pt-m03". */
 export function puzzleName(id: string): string {
   const { lang, level, number } = parseId(id);
   return `${levelName(lang, level)} ${number}`;

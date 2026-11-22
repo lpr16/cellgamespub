@@ -37,7 +37,7 @@ ECO|Som que volta na montanha
 ELO|Cada argola de uma corrente
 EMA|Ave grande do cerrado que não voa
 ERA|Longo período da história
-FIM|Ponto final, término
+FIM|Término, conclusão
 FIO|Leva a eletricidade até a tomada
 FOZ|Lugar onde o rio encontra o mar
 GÁS|Vem no botijão para acender o fogão
@@ -61,7 +61,7 @@ MEL|Doce produzido pelas abelhas
 MÊS|Janeiro ou fevereiro
 MIL|Dez vezes cem
 NÃO|O contrário de sim
-NAU|Antigo navio a vela
+NAU|Embarcação antiga dos descobridores
 NOZ|Fruto seco de casca dura
 OBA|Grito de alegria
 OCA|Casa indígena
@@ -149,7 +149,7 @@ COLA|Serve para grudar papel
 COLO|Lugar onde a mãe aconchega o bebê
 COPA|Parte de cima da árvore
 COPO|Usado para beber água
-CRER|Acreditar
+CRER|Ter fé
 CUBO|Sólido de seis faces quadradas
 CUME|Topo da montanha
 DADO|Cubo com pontos usado em jogos
@@ -161,7 +161,7 @@ DOAR|Oferecer sem cobrar nada
 DOCE|O contrário de salgado
 DOIS|Um mais um
 DONO|Proprietário
-DOZE|Número de meses do ano
+DOZE|Número de horas no mostrador do relógio
 DUNA|Monte de areia do deserto
 DURO|O contrário de mole
 ÉGUA|Fêmea do cavalo
@@ -343,7 +343,7 @@ UNHA|Fica na ponta do dedo
 UNIR|Juntar
 URNA|Caixa onde se deposita o voto
 URSO|Animal grande que gosta de mel
-USAR|Empregar, utilizar
+USAR|Vestir, calçar ou empregar
 ÚTIL|Que serve para alguma coisa
 VACA|Dá leite
 VAGA|Lugar para estacionar o carro
@@ -355,7 +355,7 @@ VIDA|Existência
 VILA|Povoado pequeno
 VOAR|O que os pássaros fazem no céu
 VOTO|Escolha do eleitor
-VOVÓ|Jeito carinhoso de chamar a mãe da mãe
+VOVÓ|Jeito carinhoso de chamar a mãe dos pais
 XALE|Manta para cobrir os ombros
 ZELO|Cuidado, capricho
 ZERO|Número antes do um
@@ -446,10 +446,10 @@ CHAVE|Abre a fechadura
 CHEFE|Quem manda no trabalho
 CHEIO|O contrário de vazio
 CHUVA|Água que cai das nuvens
-CINCO|Dedos de uma mão
+CINCO|Metade de dez
 CINTO|Tira de couro que segura a calça
 CIRCO|Espetáculo com palhaços e trapezistas
-CISNE|Ave branca de pescoço longo
+CISNE|Ave branca e elegante de um balé famoso
 CLARO|O contrário de escuro
 CLIMA|Pode ser tropical ou temperado
 CLUBE|Lugar com piscina e quadras para sócios
@@ -473,11 +473,11 @@ CREME|Recheio macio de doces
 CRIAR|Inventar
 CURVA|Trecho da estrada que não é reto
 DANÇA|Valsa ou samba
-DEDAL|Protege quem costura das espetadas
+DEDAL|Capinha de metal usada ao costurar
 DENTE|Fica na boca e serve para mastigar
 DISCO|Objeto redondo de vinil com músicas
 DIZER|Falar
-DUETO|Música cantada por duas vozes
+DUETO|Música cantada por um par de vozes
 DUPLA|Par de cantores sertanejos
 DÚZIA|Quantidade de ovos numa caixa
 ÉPOCA|Período de tempo
@@ -485,7 +485,7 @@ ETAPA|Fase
 EXATO|Preciso
 ÊXITO|Sucesso
 FAIXA|Por onde o pedestre atravessa a rua
-FALAR|Dizer palavras
+FALAR|Usar a voz para se comunicar
 FAROL|Torre que guia os navios à noite
 FATIA|Pedaço de bolo ou de pão
 FAUNA|Conjunto dos animais de uma região
@@ -590,7 +590,7 @@ MORRO|Pequena montanha
 MOTOR|Faz o carro andar
 MUDAR|Trocar de casa ou de ideia
 MUITO|O contrário de pouco
-MUNDO|O planeta inteiro
+MUNDO|A Terra com todos os seus países
 MUSEU|Lugar de exposições e obras antigas
 NAÇÃO|País e seu povo
 NADAR|Mover-se na água
@@ -635,7 +635,7 @@ PIANO|Instrumento de teclas pretas e brancas
 PILHA|Dá energia ao controle remoto
 PIRES|Pratinho que fica sob a xícara
 PISTA|Onde o avião pousa
-PLACA|Sinal de trânsito na estrada
+PLACA|Indica o nome da rua na esquina
 PLUMA|Pena macia e leve
 POEMA|Texto escrito em versos
 POLPA|Parte macia e carnuda da fruta
@@ -692,7 +692,7 @@ SAÚDE|Dito quando alguém espirra
 SECAR|Tirar a umidade
 SELVA|Floresta fechada
 SERRA|Ferramenta para cortar madeira
-SINAL|Fica verde para o carro passar
+SINAL|Gesto ou som que serve de aviso
 SÍTIO|Pequena propriedade rural
 SOGRA|Mãe do marido ou da esposa
 SONHO|História que se vive dormindo
@@ -778,7 +778,7 @@ AZEITE|Óleo de oliva
 BALEIA|Maior animal do mar
 BANANA|Fruta amarela que dá em cachos
 BARATO|Que custa pouco
-BATATA|Legume das fritas
+BATATA|Vira purê ou fritas
 BEBIDA|Suco, água ou refrigerante
 BIGODE|Pelos sobre o lábio do homem
 BONECA|Brinquedo em forma de menina
@@ -862,7 +862,7 @@ JOELHO|Articulação do meio da perna
 JORNAL|Traz as notícias do dia
 LATIDO|Som do cachorro
 LEGUME|Cenoura ou chuchu
-LENÇOL|Roupa de cama
+LENÇOL|Pano que forra o colchão
 LIMPAR|Tirar a sujeira
 MACACO|Animal que adora banana
 MÁGICO|Tira coelho da cartola
