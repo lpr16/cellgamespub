@@ -1,4 +1,5 @@
-// Builds src/games/crossword/puzzles.<language>.json from scripts/crossword-words.<language>.txt.
+// Builds src/games/crossword/puzzles.<language>.json from scripts/crossword-words.<language>.txt,
+// and src/games/words/words.<language>.json, the same words and clues for the other word games.
 //
 // Grids are lattice style: words run along every other row and column, so each
 // word crosses others at alternate letters. That keeps good fills possible with
@@ -19,6 +20,7 @@ const LANGUAGES = [
 
 const wordsFile = (code) => fileURLToPath(new URL(`./crossword-words.${code}.txt`, import.meta.url));
 const outFile = (code) => fileURLToPath(new URL(`../src/games/crossword/puzzles.${code}.json`, import.meta.url));
+const wordListFile = (code) => fileURLToPath(new URL(`../src/games/words/words.${code}.json`, import.meta.url));
 
 const LEVELS = [
   { key: 's', size: 5, count: 20, extraBlocks: [0, 1], minEntries: 4, sameShape: 7 },
@@ -59,6 +61,8 @@ function normalize(text) {
 function readWords(code) {
   const letters = code === 'es' ? /^[A-ZÑ]+$/ : /^[A-Z]+$/;
   const clues = new Map();
+  // The same words as written, accents and all, for games that show whole words.
+  const written = [];
   for (const raw of readFileSync(wordsFile(code), 'utf8').split('\n')) {
     const line = raw.trim();
     if (!line || line.startsWith('#')) continue;
@@ -73,7 +77,9 @@ function readWords(code) {
       throw new Error(`Clue gives away its answer: ${line}`);
     }
     clues.set(word, clue);
+    written.push([line.slice(0, bar).trim().toUpperCase(), clue]);
   }
+  writeFileSync(wordListFile(code), JSON.stringify(written) + '\n');
   return clues;
 }
 

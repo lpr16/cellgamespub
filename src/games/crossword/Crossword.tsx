@@ -23,8 +23,9 @@ import { LANGS, LEVEL_KEYS, levelName, parseId, puzzleName, type Lang } from './
 import puzzlesEn from './puzzles.en.json';
 import puzzlesEs from './puzzles.es.json';
 import puzzlesPt from './puzzles.pt.json';
-import { CURRENT_KEY, LANG_KEY, PROGRESS_KEY, type Progress, type SavedPuzzle } from './save';
-import { STRINGS, defaultLang, toGridLetter } from './strings';
+import { loadLang, saveLang } from '../words/lang';
+import { CURRENT_KEY, PROGRESS_KEY, type Progress, type SavedPuzzle } from './save';
+import { STRINGS, toGridLetter } from './strings';
 import './crossword.css';
 
 const SETS: Record<Lang, Puzzle[]> = {
@@ -35,11 +36,6 @@ const SETS: Record<Lang, Puzzle[]> = {
 const BY_ID = new Map(LANGS.flatMap((lang) => SETS[lang]).map((p) => [p.id, p]));
 
 const GRID_SIZES = { s: '5 × 5', m: '7 × 7', l: '9 × 9' };
-
-function savedLang(): Lang {
-  const lang = load<Lang | null>(LANG_KEY, null);
-  return lang && LANGS.includes(lang) ? lang : defaultLang();
-}
 
 function toSaved(s: CrosswordState): SavedPuzzle {
   return {
@@ -113,7 +109,7 @@ export default function Crossword({ onExit }: GameProps) {
   const [state, dispatch] = useReducer(rootReducer, null, initialState);
   const [progress, setProgress] = useState<Progress>(() => load(PROGRESS_KEY, {}));
   const [sheet, setSheet] = useState<'none' | 'clues' | 'help' | 'won'>('none');
-  const [listLang, setListLang] = useState<Lang>(savedLang);
+  const [listLang, setListLang] = useState<Lang>(loadLang);
 
   const puzzle = state ? BY_ID.get(state.puzzleId)! : null;
   // An open puzzle sets the language of the screen; the list uses the chosen one.
@@ -121,7 +117,7 @@ export default function Crossword({ onExit }: GameProps) {
   const t = STRINGS[lang];
 
   const chooseLang = (next: Lang) => {
-    save(LANG_KEY, next);
+    saveLang(next);
     setListLang(next);
   };
 

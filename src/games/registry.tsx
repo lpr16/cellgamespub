@@ -1,7 +1,9 @@
 import { lazy, type ComponentType, type LazyExoticComponent, type ReactNode } from 'react';
 import { savedSummary as crosswordSummary } from './crossword/save';
+import { savedSummary as hangmanSummary } from './hangman/save';
 import { savedSummary as solitaireSummary } from './solitaire/save';
 import { savedSummary as sudokuSummary } from './sudoku/save';
+import { savedSummary as wordSearchSummary } from './wordsearch/save';
 
 export interface GameProps {
   onExit: () => void;
@@ -69,6 +71,34 @@ const crosswordArt = (
   </svg>
 );
 
+const wordSearchArt = (
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <rect x="6" y="6" width="52" height="52" rx="8" className="art-fill" />
+    <rect x="10" y="25" width="44" height="14" rx="7" className="art-ink art-dim" />
+    <text x="17.5" y="21" className="art-text art-dim">A</text>
+    <text x="32" y="21" className="art-text art-dim">B</text>
+    <text x="46.5" y="21" className="art-text art-dim">C</text>
+    <text x="17.5" y="36.5" className="art-text">S</text>
+    <text x="32" y="36.5" className="art-text">O</text>
+    <text x="46.5" y="36.5" className="art-text">L</text>
+    <text x="17.5" y="52" className="art-text art-dim">X</text>
+    <text x="32" y="52" className="art-text art-dim">Y</text>
+    <text x="46.5" y="52" className="art-text art-dim">Z</text>
+  </svg>
+);
+
+const hangmanArt = (
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <rect x="30.5" y="32" width="3" height="27" rx="1.5" className="art-ink art-dim" />
+    <path d="M32 50c-8-1-12-5-13-11 7 0 12 4 13 11z" className="art-ink art-dim" />
+    {[0, 1, 2, 3, 4].map((i) => (
+      <ellipse key={i} cx="32" cy="11" rx="6.5" ry="10" className="art-ink" transform={`rotate(${i * 60} 32 24)`} />
+    ))}
+    <ellipse cx="32" cy="11" rx="6.5" ry="10" className="art-line" strokeDasharray="2 2.5" transform="rotate(300 32 24)" />
+    <circle cx="32" cy="24" r="7" className="art-fill" />
+  </svg>
+);
+
 export const GAMES: GameEntry[] = [
   {
     id: 'sudoku',
@@ -103,5 +133,23 @@ export const GAMES: GameEntry[] = [
     art: crosswordArt,
     component: lazy(() => import('./crossword/Crossword')),
     resume: crosswordSummary,
+  },
+  {
+    id: 'wordsearch',
+    name: 'Word search',
+    blurb: 'English, Português, Español',
+    accent: 'var(--wordsearch)',
+    art: wordSearchArt,
+    component: lazy(() => import('./wordsearch/WordSearch')),
+    resume: wordSearchSummary,
+  },
+  {
+    id: 'hangman',
+    name: 'Hangman',
+    blurb: 'Guess the word, save the flower',
+    accent: 'var(--hangman)',
+    art: hangmanArt,
+    component: lazy(() => import('./hangman/Hangman')),
+    resume: hangmanSummary,
   },
 ];
